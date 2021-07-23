@@ -16,7 +16,6 @@ source/example: Two examples for vital sign estimation and occupancy.<br>
 # Reference Works
 We learn and use some nice open source works in our project. The reference works are listed below. If you find your code or project are involved by us, please let us know. Thanks!
 
-[1]https://github.com/DodgeHo/VMD_cpp
-
-[2]https://eigen.tuxfamily.org/
+[1]https://github.com/DodgeHo/VMD_cpp<br>
+[2]https://eigen.tuxfamily.org/<br>
 
