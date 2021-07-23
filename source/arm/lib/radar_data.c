@@ -10,6 +10,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include "fpga_define.h"
+#include "x4driver.h"
 
 
 float randData()
@@ -50,4 +51,14 @@ void* getRadarDataAddr(radar_info* radarInfo)
 	return 0;
 #endif
     return createSimData();
+}
+
+
+
+
+
+int radarInit()
+{
+	Radar();
+	return 0;
 }

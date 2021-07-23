@@ -7,6 +7,8 @@
 #ifndef INC_FPGA_DEFINE_H_
 #define INC_FPGA_DEFINE_H_
 
+#include "fsmc.h"
+
 
 #define _FPGA_RAWDATA
 #define _FPGA_FIR
@@ -16,10 +18,6 @@
 #define _FPGA_CNN
 
 
-
-//TODO : fix your FSMC addr
-#define fpga_read(addr)	          (*((unsigned short*)(0x60000000+addr)))
-#define fpga_write(addr,data)     {*((unsigned short*)(0x60000000+addr)) = data;}
 
 #define FMC_ADDR_DATA				(101)
 

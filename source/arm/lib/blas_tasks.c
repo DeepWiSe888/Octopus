@@ -198,7 +198,7 @@ int vitalVMD(task_info *ti)
     //rpm/bpm wave plot or print usart
 
 	// clear flag
-    fpga_write(FMC_ADDR_RADAR_DATA_FLAG,0)
+    fpga_write(FMC_ADDR_RADAR_DATA_FLAG,0);
 	return 0;
 }
 

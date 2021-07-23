@@ -13,6 +13,8 @@ extern "C"
 #endif
 #include "task_define.h"
 
+int radarInit();
+
 //void setupRadarInput(radar_info* radarInfo);
 void* getRadarDataAddr(radar_info* radarInfo);
 
