@@ -18,4 +18,5 @@ We learn and use some nice open source works in our project. The reference works
 
 [1]https://github.com/DodgeHo/VMD_cpp<br>
 [2]https://eigen.tuxfamily.org/<br>
+[3]https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA<br>
 
