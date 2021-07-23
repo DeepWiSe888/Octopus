@@ -5,12 +5,12 @@ Radio frequency (RF) technologies have achieved a great success in data communic
 STM32CubeIDE, STM32CubeMX, Intel Quartus II
 
 # About Folders
-hardware: The schematics of antenna array design.
-source: The source code of ARM and FPGA.
-source/arm: A lightweight DAG-scheduler based on FreeRTOS.
-source/lib: Basic DSP and MISC. for ARM signal process. More description of ARM code is located in this folder.
-source/FPGA: DSP and CNN for FPGA signal process. More description of FPGA code is located in this folder.
-source/example: Two examples for vital sign estimation and occupancy.
+hardware: The schematics of antenna array design.<br>
+source: The source code of ARM and FPGA.<br>
+source/arm: A lightweight DAG-scheduler based on FreeRTOS.<br>
+source/lib: Basic DSP and MISC. for ARM signal process. More description of ARM code is located in this folder.<br>
+source/FPGA: DSP and CNN for FPGA signal process. More description of FPGA code is located in this folder.<br>
+source/example: Two examples for vital sign estimation and occupancy.<br>
 
 
 # Reference Works
