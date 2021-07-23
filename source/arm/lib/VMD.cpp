@@ -1,3 +1,9 @@
+/*
+ * Project Octopus
+ *
+ */
+
+
 #include "VMD.h"
 
 
@@ -16,10 +22,6 @@ using namespace Eigen;
 typedef std::vector<double> vectord;
 typedef std::vector<std::complex<double> > vectorcd;
 typedef std::vector<MatrixXcd> Matrix3DXd;
-
-//void VMD(MatrixXd& u, MatrixXcd& u_hat, MatrixXd& omega,
-//	vectord& signal,
-//	double alpha, double tau, const int K, const int DC, const int init, double tol);
 
 vectorcd circshift(vectorcd& data, int offset);
 

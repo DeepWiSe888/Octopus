@@ -1,9 +1,8 @@
 /*
- * blas_tasks.c
+ * Project Octopus
  *
- *  Created on: Jul 1, 2021
- *      Author: link
  */
+
 
 
 #include "blas_tasks.h"
@@ -12,10 +11,7 @@
 #include <math.h>
 #include "blas.h"
 #include "VMD.h"
-
-#define _FPGA_FIR
-#define _FPGA_FFT
-//#define _FPGA_VMD
+#include "fpga_define.h"
 
 
 // FIR
@@ -116,10 +112,6 @@ int FFT1D_useFPGA(task_info *ti)
 {
 	// do nothing.
 
-	// fpgaread(flag);
-
-	//wait for samphore...
-
 	return 0;
 }
 
@@ -150,19 +142,16 @@ task_info createTaskVMD(void* input)
 }
 
 
-//TODO : fix here
-#define fpga_read(addr)	1
-#define fpga_write(addr,data)
 
 int vitalVMD(task_info *ti)
 {
 	// wait for i/o interrupt
     if( xSemaphoreTake( semFFT, portTICK_RATE_MS*1000*10 ) != pdTRUE )
     {
-	    return 0;
+	    return 1;
     }
 	//fpga read
-    uint16_t fmcDataAddr = 101;
+    uint16_t fmcDataAddr = FMC_ADDR_DATA;
     int antID = fpga_read(fmcDataAddr++);
     int frameNo = fpga_read(fmcDataAddr++);
     complex* firdata = (complex*)ti->output;
@@ -209,11 +198,43 @@ int vitalVMD(task_info *ti)
     //rpm/bpm wave plot or print usart
 
 	// clear flag
-    fpga_write(53,0)
+    fpga_write(FMC_ADDR_RADAR_DATA_FLAG,0)
 	return 0;
 }
 
 
+// --- CNN People Counting --- //
+int occupancyCNN_useFPGA(task_info *ti);
+task_info createTaskCNN_PeopleCounting(void* input)
+{
+    //build task
+    task_info ti;
+    bzero(&ti, sizeof(ti));
+    strcpy(ti.func_name, "CNN");
+#ifdef _FPGA_FFT
+	ti.input = 0;
+	ti.output = 0;
+	ti.params = 0;
+	ti.func_ptr = occupancyCNN_useFPGA;
+#else
+    ti.func_ptr = 0;
+    ti.input = 0;
+    ti.output = 0;
+    ti.params = 0;
+#endif
+
+    return ti;
+
+}
+
+
+int occupancyCNN_useFPGA(task_info *ti)
+{
+	// do nothing.
+
+
+	return 0;
+}
 
 
 

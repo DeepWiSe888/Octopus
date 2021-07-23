@@ -1,3 +1,7 @@
+/*
+ * Project Octopus
+ *
+ */
 
 #ifndef INC_BLAS_H_
 #define INC_BLAS_H_

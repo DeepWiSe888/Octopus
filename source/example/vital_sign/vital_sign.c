@@ -1,9 +1,8 @@
 /*
- * vital_sign.c
+ * Project Octopus
  *
- *  Created on: Jun 30, 2021
- *      Author: link
  */
+
 
 #include "vital_sign.h"
 #include <string.h>
@@ -82,6 +81,7 @@ task_info createTaskGetRpmBpm(void* input)
 
 int vitalSignDetect()
 {
+	printf("create vital sign task flow...\n");
 	task_flow tf = createTaskFlow("vs");
 	//addRadarInput("{,}");
 	void* radarDataPtr = getRadarDataAddr(0);
@@ -96,11 +96,14 @@ int vitalSignDetect()
 	addTaskNode(4,3,&taskGetVital, &tf);
 
 
-	semFFT = xSemaphoreCreateBinary();
+	printf("run vital sign tasks...\n");
 
 	printTaskFlow(&tf);
 	runTaskFlow(&tf, 10);
 	destroyTaskFlow(&tf);
+
+
+	printf("vital sign tasks done.\n");
 	return 0;
 }
 

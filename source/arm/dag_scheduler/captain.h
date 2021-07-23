@@ -1,8 +1,6 @@
 /*
- * captain.h
+ * Project Octopus
  *
- *  Created on: 2021年6月25日
- *      Author: link
  */
 
 #ifndef INC_CAPTAIN_H_

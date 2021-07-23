@@ -1,8 +1,6 @@
 /*
- * captain.c
+ * Project Octopus
  *
- *  Created on: 2021年6月27日
- *      Author: link
  */
 
 

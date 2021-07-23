@@ -1,9 +1,8 @@
 /*
- * blas_tasks.h
+ * Project Octopus
  *
- *  Created on: Jun 30, 2021
- *      Author: link
  */
+
 
 #ifndef INC_BLAS_TASKS_H_
 #define INC_BLAS_TASKS_H_
@@ -23,6 +22,7 @@ extern "C"
 
 
 SemaphoreHandle_t semFFT;
+SemaphoreHandle_t semCNN;
 
 //  --- FIR --- //
 // order: 256 by default
@@ -39,6 +39,9 @@ task_info createTask1DFFT(void* input);
 // --- VMD --- //
 task_info createTaskVMD(void* input);
 
+
+// --- CNN People Counting --- //
+task_info createTaskCNN_PeopleCounting(void* input);
 
 
 
