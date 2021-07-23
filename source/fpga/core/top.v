@@ -199,10 +199,10 @@ spi_module u5(
 	 .O_rx_done(SPI_rx_done)  , 
 	 .I_cs(CS)                ,
 	 
-	 .I_spi_miso(x4_miso)     , // SPI串行输入，用来接收从机的数据
-	 .O_spi_sck(x4_sclk)      , // SPI时钟
-	 .O_spi_cs(x4_cs)         , // SPI片选信
-	 .O_spi_mosi(x4_mosi)     ,    // SPI输出，用来给从机发送数
+	 .I_spi_miso(x4_miso)     , 
+	 .O_spi_sck(x4_sclk)      , 
+	 .O_spi_cs(x4_cs)         , 
+	 .O_spi_mosi(x4_mosi)     ,    
 	 
 );
 
@@ -217,10 +217,10 @@ spi_module u6(
 	 .O_rx_done( )  , 
 	 .I_cs( )                ,
 	 
-	 .I_spi_miso(x4_2_miso )     , // SPI串行输入，用来接收从机的数据
-	 .O_spi_sck(x4_2_sclk )      , // SPI时钟
-	 .O_spi_cs(x4_2_cs )         , // SPI片选信
-	 .O_spi_mosi(x4_2_mosi )     ,    // SPI输出，用来给从机发送数
+	 .I_spi_miso(x4_2_miso )     , 
+	 .O_spi_sck(x4_2_sclk )      , 
+	 .O_spi_cs(x4_2_cs )         , 
+	 .O_spi_mosi(x4_2_mosi )     ,    
 	 
 );
 /**************************sdram***********************************************/
