@@ -28,13 +28,13 @@ module arm_cmd_ctrl(
 	input       read_spi_done, 	
 	
 	
-	output reg fft_isr2mcu,
-	output reg fir_isr2mcu,
-	output reg x4data_isr2mcu,
+	output fft_isr2mcu,
+	output fir_isr2mcu,
+	output x4data_isr2mcu,
 	
 	 
-	input [23:0]fir_data,
-
+	input [23:0]fir_real_data,
+	input [23:0]fir_imag_data,
 	
    input [23:0]fft_real_data,
 	input [23:0]fft_imag_data,
@@ -198,17 +198,6 @@ always@(posedge clk_a or negedge rst_n)
 					 read_addr	 <= 16'd50; 
 					 cmd_data    <= 0;
 				end	
-				else if(cmd_data == 16'h44)//read fft
-				begin
-				      cmd_state   <= 8'd12; //
-					   write_addr   <=  0;
-				end
-				
-			else if(cmd_data == 16'h45)//read fir
-				begin
-				      cmd_state   <= 8'd13; //
-						 write_addr   <=  0;
-				end
 				else
 			   begin
 					cmd_state  <= 16'd0;
@@ -221,17 +210,14 @@ always@(posedge clk_a or negedge rst_n)
 				address_a   <= 16'd1;		     
 				data_a      <= 16'd0;   
             cmd_state   <= cmd_state + 1;;
-			
        end	
-		 16'd8:      //switch to read cmd
+		 16'd8:   //switch to read cmd
 		 begin
 		      wren_a      <= 1'd1;          
 				rden_a      <= 1'd0;			
 				address_a   <= 16'd1;		     
 				data_a      <= 16'd0;   
             cmd_state   <= 16'd0;
-			   fft_isr2mcu <= 0;	
-				fir_isr2mcu <= 0;	
        end			 
        16'd9:    //read spi data from ram write to x4
 		 begin
@@ -302,56 +288,9 @@ always@(posedge clk_a or negedge rst_n)
 				data_a      <= 1;    
             cmd_state   <= 10;
 		 end
-      16'd12:                                            //
-		 begin
+
 		 
-		      if(write_addr == 16'd50 + 128) 
-					  begin					    
-												
-						   cmd_state   <= 16'd7; //
-							fft_isr2mcu <= 1;	
-					  end
-								 
-					  else
-					  begin							 
-							wren_a      <= 1'b1;
-							rden_a      <= 1'b0;
-							address_a   <= write_addr;	
-							data_a      <= read_spi_data;                //	 
-                     cmd_state   <= 16'd11; //							
-					  end
-			
-		 end
-		 16'd13:                                            //
-		 begin
-		         cmd_state  <= 16'd12; //	
-				  write_addr   <= write_addr + 1'b1;    //
-		 end
 		 
-		  16'd14:                                            //
-		 begin
-		 
-		      if(write_addr == 16'd50 + 128) 
-					  begin					    
-						  fir_isr2mcu <= 1;					
-						  cmd_state   <= 16'd7; //
-							
-					  end 			 
-					  else
-					  begin							 
-							wren_a      <= 1'b1;
-							rden_a      <= 1'b0;
-							address_a   <= write_addr;	
-							data_a      <= read_spi_data;                //	 
-                     cmd_state   <= 16'd11; //							
-					  end
-			
-		 end
-		 16'd15:                                            //
-		 begin
-		        cmd_state  <= 16'd14; //	
-				  write_addr   <= write_addr + 1'b1;    //
-		 end
 		 default : cmd_state   <= 16'd0;
 		 endcase
 

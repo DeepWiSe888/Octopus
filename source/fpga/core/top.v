@@ -115,14 +115,7 @@ arm_cmd_ctrl u3(
 	.read_spi_data(read_spi_data),
 	.read_spi_done(read_spi_done), 	
 	
-	.fft_real_data(fft_real_data),
-	.fft_imag_data(fft_imag_data),
 	
-   .fir_data(fir_data),
-
-	
-	.x4_real_data(x4_imag_data),
-	.x4_imag_data(x4_imag_data)	
 
 );
 
@@ -185,7 +178,13 @@ x4_ctrl u4(
 	
    .x4_init_done(x4_init_done),
 	
-
+	.r_switch_A(r_switch_A),	        //  	
+	.r_switch_B(r_switch_B),		    //  
+	.r_switch_C(r_switch_C),	
+	//antenna transfer SWITCH
+	.t_switch_A(t_switch_A),	        //  	
+	.t_switch_B(t_switch_B),		    //  
+	.t_switch_C(t_switch_C),
 );
 
 spi_module u5(
@@ -199,10 +198,10 @@ spi_module u5(
 	 .O_rx_done(SPI_rx_done)  , 
 	 .I_cs(CS)                ,
 	 
-	 .I_spi_miso(x4_miso)     , 
-	 .O_spi_sck(x4_sclk)      , 
-	 .O_spi_cs(x4_cs)         , 
-	 .O_spi_mosi(x4_mosi)     ,    
+	 .I_spi_miso(x4_miso)     , // SPI串行输入，用来接收从机的数据
+	 .O_spi_sck(x4_sclk)      , // SPI时钟
+	 .O_spi_cs(x4_cs)         , // SPI片选信
+	 .O_spi_mosi(x4_mosi)     ,    // SPI输出，用来给从机发送数
 	 
 );
 
@@ -217,10 +216,10 @@ spi_module u6(
 	 .O_rx_done( )  , 
 	 .I_cs( )                ,
 	 
-	 .I_spi_miso(x4_2_miso )     , 
-	 .O_spi_sck(x4_2_sclk )      , 
-	 .O_spi_cs(x4_2_cs )         , 
-	 .O_spi_mosi(x4_2_mosi )     ,    
+	 .I_spi_miso(x4_2_miso )     , // SPI串行输入，用来接收从机的数据
+	 .O_spi_sck(x4_2_sclk )      , // SPI时钟
+	 .O_spi_cs(x4_2_cs )         , // SPI片选信
+	 .O_spi_mosi(x4_2_mosi )     ,    // SPI输出，用来给从机发送数
 	 
 );
 /**************************sdram***********************************************/
@@ -284,8 +283,8 @@ wire [24:0] x4data_data;
 wire        fft_sop;
 wire        fft_eop;
 wire        fft_valid;
-wire [24:0] fft_real_data;
-wire [24:0] fft_imag_data;
+wire [24:0] fft_data;
+
 FFT_top FFT_u(
     .clk_100m            (clk_100m),
     .rst_n               (rst_n),
@@ -295,16 +294,14 @@ FFT_top FFT_u(
     .x4_real_data        (x4data_data),
     .x4_data_valid       (x4data_valid),
         
-    .data_real          (fft_real_data),
-	 .data_imag           (fft_imag_data),
+    .data_real          (fft_data),
+	 .data_imag           (),
     .data_sop           (fft_sop),
     .data_eop           (fft_eop),
     .data_valid         (fft_valid)
     );
 	 
 /*****************fir****************/ 
-wire [24:0] fir_data;
-
 fir f0(
     .clk                (aud_bclk),
     .reset_n            (rst_n),
@@ -315,7 +312,7 @@ fir f0(
     .ast_sink_ready     (),
     
     .ast_source_ready   (1'b1),
-    .ast_source_data    (fir_data),
+    .ast_source_data    (fir_odata_w),
     .ast_source_valid   (fir_dvalid_w),
     .ast_source_error   (),
 );				  
@@ -325,7 +322,7 @@ fir f0(
 
 wire GO;
 wire [3:0] RESULT;
-wire  we_database;
+wire we_database;
 wire  [10:0] dp_database;
 wire  [12:0] address_p_database;
 wire STOP;
@@ -334,7 +331,7 @@ cnn_top
   .clk(clk_100m), 
   .GO(), 
   .RESULT(RESULT), 
-  .we_database(x4data_data),
+  .we_database(dp_database),
   .dp_database(address_p_database), 
   .address_p_database(address_p_database),
   .STOP(STOP),
