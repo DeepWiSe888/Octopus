@@ -78,7 +78,7 @@ void x4driver_data_ready(void)
 }
 
 
-//void EXTI9_5_IRQHandler(void)         //ADS1293�ⲿ�жϴ�����
+//void EXTI9_5_IRQHandler(void)         
 //{  
 //	uint32_t status = XEP_ERROR_X4DRIVER_OK;
 //	uint32_t bin_count = 0;
@@ -93,7 +93,7 @@ void x4driver_data_ready(void)
 //		if(isr_done) 
 //		{	
 //			//wake_up(Radar_event);
-//			//QueueIn(&ecg_data,ECG_data) ;	//����FIFO
+//			//QueueIn(&ecg_data,ECG_data) ;	//FIFO
 //			x4driver_get_frame_bin_count(x4driver,&bin_count);
 //			down_conversion_enabled = 0;
 //			x4driver_get_downconversion(x4driver,&down_conversion_enabled);	 		
