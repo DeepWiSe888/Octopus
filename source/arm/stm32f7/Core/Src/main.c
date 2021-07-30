@@ -95,7 +95,7 @@ PUTCHAR_PROTOTYPE
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 
-	 if(GPIO_Pin == GPIO_PIN_1)
+	 /*if(GPIO_Pin == GPIO_PIN_1)
 	 {
 		 static BaseType_t xHigherPriorityTaskWoken;
 		 xHigherPriorityTaskWoken = pdFALSE;
@@ -104,13 +104,14 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 		 portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
 	 }
+	 */
 
 	 if(GPIO_Pin == GPIO_PIN_2)
 	 {
 		 static BaseType_t xHigherPriorityTaskWoken;
 		 xHigherPriorityTaskWoken = pdFALSE;
 
-		 xSemaphoreGiveFromISR( semCNN, &xHigherPriorityTaskWoken );
+		 //xSemaphoreGiveFromISR( semCNN, &xHigherPriorityTaskWoken );
 		 xSemaphoreGiveFromISR( xSemaphore, &xHigherPriorityTaskWoken );
 
 		 portYIELD_FROM_ISR( xHigherPriorityTaskWoken );
@@ -169,6 +170,10 @@ int main(void)
   /* add semaphores, ... */
 
 	semFFT = xSemaphoreCreateBinary();
+
+	  printf("1 create semaphore...\n");
+	  xSemaphore = xSemaphoreCreateBinary();
+
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
@@ -194,7 +199,7 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
-  radarInit();
+  //radarInit();
   /* USER CODE END RTOS_THREADS */
 
   /* Start scheduler */
@@ -503,6 +508,14 @@ void StartDefaultTask(void const * argument)
   //{
   //}
 
+	osDelay(10*1000);
+
+	 static BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+
+	 xSemaphoreGiveFromISR( xSemaphore, &xHigherPriorityTaskWoken );
+
+	 xHigherPriorityTaskWoken = pdFALSE;
+	 xSemaphoreGiveFromISR( xSemaphore, &xHigherPriorityTaskWoken );
   for(;;)
   {
     osDelay(1);
@@ -522,19 +535,17 @@ void StartTask02(void const * argument)
 {
   /* USER CODE BEGIN StartTask02 */
   /* Infinite loop */
-  vitalSignDetect();
-  printf("1 create semaphore...\n");
-  xSemaphore = xSemaphoreCreateBinary();
+  //vitalSignDetect();
 
-  printf("2 take semaphore...\n");
-  if( xSemaphoreTake( xSemaphore, portTICK_RATE_MS*1000*30 ) == pdTRUE )
+  printf("task 2 take semaphore...\n");
+  if( xSemaphoreTake( xSemaphore, portTICK_RATE_MS*1000*300 ) == pdTRUE )
   {
-	  printf("3 semaphore get.\n");
+	  printf("task 2  semaphore get.\n");
 
   }
   else
   {
-	  printf("333. semaphore timeover.\n");
+	  printf("task 2 semaphore timeover.\n");
   }
   //return;
   for(;;)
@@ -555,9 +566,20 @@ void StartTask02(void const * argument)
 void StartTask03(void const * argument)
 {
   /* USER CODE BEGIN StartTask03 */
-  occupancyDetect();
+  //occupancyDetect();
   /* Infinite loop */
 	  //return;
+
+  printf("task 3 take semaphore...\n");
+  if( xSemaphoreTake( xSemaphore, portTICK_RATE_MS*1000*300 ) == pdTRUE )
+  {
+	  printf("task 3  semaphore get.\n");
+
+  }
+  else
+  {
+	  printf("task 3 semaphore timeover.\n");
+  }
   for(;;)
   {
     osDelay(1);

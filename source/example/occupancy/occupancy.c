@@ -57,12 +57,13 @@ int occupancyDetect()
 	task_info taskCNN = createTaskCNN_PeopleCounting(radarDataPtr);
 	task_info taskGetPPC = createTaskGetPPC(taskCNN.output);
 
-	addTaskNode(1,0, &taskCNN, &tf);
-	addTaskNode(2,1,&taskGetPPC, &tf);
+	addTaskNode(1, &taskCNN, &tf);
+	addTaskNode(2,&taskGetPPC, &tf);
+	setPreTask(2,1, &tf);
 
 	runTaskFlow(&tf, 10);
 
-	printf("result: people count = %d\n", *((uint32_t*)(taskGetPPC.output)));
+	printf("result: people count = %u\n", *((uint32_t*)(taskGetPPC.output)));
 
 	destroyTaskFlow(&tf);
 

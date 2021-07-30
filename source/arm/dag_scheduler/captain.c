@@ -7,19 +7,69 @@
 #include "captain.h"
 #include <memory.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "task_sync.h"
+#include "cmsis_os.h"
 
-
-int runTask(task_info* ti)
+typedef struct _run_task_param
 {
+	task_info* taskInfo;
+	task_sem_list* semList;
+} run_task_param;
+
+void startTaskThread(void const * argument)
+{
+	run_task_param * runParam = (run_task_param*)argument;
+
+	task_info *ti = runParam->taskInfo;
+	int taskNode = ti->node;
+
+	// --- check semaphore take --- //
+	task_sem_list *si = runParam->semList;
+	while(si)
+	{
+		if(si->semInfo.nextTask == taskNode)
+			waitSemaphore(si->semInfo.semNo, SEMAPHORE_WAIT_TIME_MAX);
+		si = si->next;
+	}
+
+	// --- run task function --- //
     typedef int(*TASK_FUN)(task_info*);
     TASK_FUN pf = (TASK_FUN)(ti->func_ptr);
     pf(ti);
+
+    // --- check give semaphore --- //
+    si = runParam->semList;
+	while(si)
+	{
+		if(si->semInfo.preTask == taskNode)
+			giveSemaphore(si->semInfo.semNo);
+		si = si->next;
+	}
+
+}
+
+
+
+int runTask(task_info* ti, task_flow* tf)
+{
+	run_task_param runParam = {ti, tf->semList};
+
+    char szTaskThread[32];
+    sprintf(szTaskThread, "taskThread%d", ti->node);
+    const osThreadDef_t thread1 = { szTaskThread, startTaskThread, osPriorityIdle, 0, 512, NULL, NULL };
+
+    osThreadCreate(&thread1, &runParam);
+
+	//startTaskThread(&runParam);
     return 0;
 }
 
+
+
 radar_info* createRadarInfo(char* infostr)
 {
-	radar_info *radarInfo = (radar_info*)malloc(sizeof(radar_info));
+	radar_info *radarInfo = (radar_info*)taskMemAlloc(sizeof(radar_info));
 	bzero(radarInfo, sizeof(radar_info));
 	return radarInfo;
 }
@@ -45,8 +95,9 @@ int addRadarInputDescribe(char* radarDescrib, task_flow* taskFlow) // "sig=iq, f
 }
 
 
-int addTaskNode(char taskNode, char preNode, task_info* taskInfo, task_flow* tf)
+int addTaskNode(char taskNode, task_info* taskInfo, task_flow* tf)
 {
+	taskInfo->node = taskNode;
 	// first one
 	if(tf->taskList.taskInfo==0)
 	{
@@ -57,18 +108,40 @@ int addTaskNode(char taskNode, char preNode, task_info* taskInfo, task_flow* tf)
 
 	// add to tail
 	task_list* plast = &tf->taskList;
-	if(plast->taskInfo->node == preNode)
-		taskInfo->input = plast->taskInfo->output;
+	//if(plast->taskInfo->node == preNode)
+	//	taskInfo->input = plast->taskInfo->output;
 	while(plast->next)
 	{
 		plast = plast->next;
-		if(plast->taskInfo->node == preNode)
-			taskInfo->input = plast->taskInfo->output;
+		//if(plast->taskInfo->node == preNode)
+		//	taskInfo->input = plast->taskInfo->output;
 	}
-	task_list* pnew = (task_list*)malloc(sizeof(task_list));
+	task_list* pnew = (task_list*)taskMemAlloc(sizeof(task_list));
 	pnew->taskInfo = taskInfo;
 	pnew->next = 0;
 	plast->next = pnew;
+	return 0;
+}
+
+
+int setPreTask(char taskNo, char preTaskNo, task_flow* tf)
+{
+	int semNo = getNextFreeSemaphoreNo();
+	task_sem_list* newSemList = (task_sem_list*)taskMemAlloc(sizeof(task_sem_list));
+	newSemList->semInfo.nextTask = taskNo;
+	newSemList->semInfo.preTask = preTaskNo;
+	newSemList->semInfo.semNo = semNo;
+	newSemList->next = 0;
+	if(tf->semList==0)
+		tf->semList = newSemList;
+	else
+	{
+		task_sem_list* semlist = tf->semList;
+        while(semlist->next)
+        	semlist = semlist->next;
+        semlist->next = newSemList;
+	}
+
 	return 0;
 }
 
@@ -84,7 +157,7 @@ int runTaskFlow(task_flow* taskFlow, int maxTimeOut)
     void *resultData = 0;
     while(taskList)
     {
-        runTask(taskList->taskInfo);
+        runTask(taskList->taskInfo, taskFlow);
         resultData = taskList->taskInfo->output;
         taskList = taskList->next;
     }

@@ -1,9 +1,8 @@
 /*
- * task_define.h
+ * Project Octopus
  *
- *  Created on: feb 10, 2021
- *      Author: link
  */
+
 
 #ifndef INC_TASK_DEFINE_H_
 #define INC_TASK_DEFINE_H_
@@ -33,7 +32,7 @@ typedef struct _radar_info{
 // _________________________
 // |       task name       |
 // |     function ptr      |              --[read input]-> {function} --[write output]->  ... next task
-// |    input data ptr     |                                    ^
+// |    input data ptr     |          <takeSemaphore>           ^            <giveSemaphore>
 // |    output data ptr    |                                    |
 // |     calc param ptr    |                  -- [calc param] __|
 // |       node num        |
@@ -47,13 +46,23 @@ typedef struct _task_info{
 	void* output;       // alloc memory during task building; use as matrix recommanded
     void* params;       // use by task func_ptr
 	int   node;
-	int   pre_node;
 }task_info;
 
 typedef struct _task_list{      // maybe i'll use acyclic_graph or tree finnaly,
 	task_info* taskInfo;        // but now list for quick performing.
 	struct _task_list* next;
 }task_list;
+
+typedef struct _task_sem_info{
+	char preTask;
+	char nextTask;
+	char semNo;
+}task_sem_info;
+
+typedef struct _task_sem_list{      // maybe i'll use acyclic_graph or tree finnaly,
+	task_sem_info semInfo;        // but now list for quick performing.
+	struct _task_sem_list* next;
+}task_sem_list;
 
 // task flow like this
 // [radar data] -- [task 1] -- [task2] -- ... -- [output A]
@@ -67,6 +76,7 @@ typedef struct _task_flow{
 	task_list taskList;
 	void* memPool;
 	int   memPoolSize;
+	task_sem_list* semList;
 	//something else
 }task_flow;
 

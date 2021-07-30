@@ -7,6 +7,7 @@
 #include "vital_sign.h"
 #include <string.h>
 #include <stdio.h>
+#include <math.h>
 #include "captain.h"
 #include "blas_tasks.h"
 #include "radar_data.h"
@@ -90,10 +91,13 @@ int vitalSignDetect()
 	task_info taskVMD = createTaskVMD(0);
 	task_info taskGetVital = createTaskGetRpmBpm(taskFFT.output);
 
-	addTaskNode(1,0, &taskFIR, &tf);
-	addTaskNode(2,1, &taskFFT, &tf);
-	addTaskNode(3,2,&taskVMD, &tf);
-	addTaskNode(4,3,&taskGetVital, &tf);
+	addTaskNode(1,&taskFIR, &tf);
+	addTaskNode(2,&taskFFT, &tf);
+	addTaskNode(3,&taskVMD, &tf);
+	addTaskNode(4,&taskGetVital, &tf);
+	setPreTask(2,1, &tf);
+	setPreTask(3,2, &tf);
+	setPreTask(4,3, &tf);
 
 
 	printf("run vital sign tasks...\n");
