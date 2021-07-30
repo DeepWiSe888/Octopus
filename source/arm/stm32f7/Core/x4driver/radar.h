@@ -41,7 +41,7 @@ private:
 typedef struct
 {
     char        flag[4];        //"x4m5";
-    char        RadarID[16];    //lei da id
+    char        RadarID[16];    //radar id
     uint32_t    frameno;
     uint32_t    bincnt;
 }tagWiFiFrameHead;
