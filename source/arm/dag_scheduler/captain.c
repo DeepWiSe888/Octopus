@@ -47,19 +47,21 @@ void startTaskThread(void const * argument)
 		si = si->next;
 	}
 
+	taskMemFree(runParam);
+
 }
 
 
 
 int runTask(task_info* ti, task_flow* tf)
 {
-	run_task_param runParam = {ti, tf->semList};
+	run_task_param *runParam = (run_task_param*)taskMemAlloc(sizeof(run_task_param));
+	runParam->semList = tf->semList;
+	runParam->taskInfo = ti;
 
     char szTaskThread[32];
     sprintf(szTaskThread, "taskThread%d", ti->node);
-    const osThreadDef_t thread1 = { szTaskThread, startTaskThread, osPriorityIdle, 0, 512, NULL, NULL };
-
-    osThreadCreate(&thread1, &runParam);
+    createTaskThread(szTaskThread, startTaskThread, &runParam);
 
 	//startTaskThread(&runParam);
     return 0;

@@ -26,6 +26,10 @@ int giveSemaphore(uint32_t semNo);
 int getNextFreeSemaphoreNo();
 
 
+typedef void(*THREAD_FUN)(void const *);
+int createTaskThread(const char* taskName, THREAD_FUN threadFun, void* param);
+
+
 
 #ifdef  __cplusplus
 }

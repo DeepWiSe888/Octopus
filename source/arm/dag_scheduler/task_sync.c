@@ -5,17 +5,37 @@
 
 #include "task_sync.h"
 
-#include "cmsis_os.h"
 
 #define _FREE_RTOS
 //#define _LINUX
 
 
 
+
 #define MAX_SEMAPHORE	(100)
-SemaphoreHandle_t g_sem[MAX_SEMAPHORE] = {0};
+
+
+
+int getNextFreeSemaphoreNo()
+{
+	static int nextSemNO = 1;
+	int semNo = nextSemNO;
+	nextSemNO ++;
+	return semNo;
+}
+
+
+///////////////////////////////////////////////////////////////////////////
+//
+//     Free RTOS codes
+//
+///////////////////////////////////////////////////////////////////////////
 
 #ifdef _FREE_RTOS
+
+#include "cmsis_os.h"
+
+SemaphoreHandle_t g_sem[MAX_SEMAPHORE] = {0};
 
 SemaphoreHandle_t getSemaphore(int no)
 {
@@ -53,13 +73,39 @@ int giveSamphore(uint32_t semNo)
 }
 
 
+
+
+int createTaskThread(const char* taskName, THREAD_FUN threadFun, void* param)
+{
+    const osThreadDef_t thread1 = { taskName, threadFun, osPriorityIdle, 0, 512, NULL, NULL };
+
+    osThreadCreate(&thread1, param);
+	return 0;
+}
+
 #endif
 
 
-int getNextFreeSemaphoreNo()
+
+
+
+///////////////////////////////////////////////////////////////////////////
+//
+//     Linux codes
+//
+///////////////////////////////////////////////////////////////////////////
+
+#ifdef _LINUX
+int createTaskThread(THREAD_FUN threadFun, void* param)
 {
-	static int nextSemNO = 1;
-	int semNo = nextSemNO;
-	nextSemNO ++;
-	return semNo;
+
 }
+
+#endif
+
+
+
+
+
+
+
