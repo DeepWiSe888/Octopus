@@ -206,6 +206,10 @@ int vitalVMD(task_info *ti)
 #else
 int vitalVMD(task_info *ti)
 {
+    //float* srcAbs = (float*)ti->input;
+    //float rpmWave[VITAL_WIN_LEN];
+    //float bpmWave[VITAL_WIN_LEN];
+    //VMD_vital(srcAbs, VITAL_WIN_LEN, rpmWave, bpmWave);
     return 0;
 }
 #endif
