@@ -7,6 +7,8 @@
 #ifndef INC_FPGA_DEFINE_H_
 #define INC_FPGA_DEFINE_H_
 
+#ifdef _USE_FPGA
+
 #include "fsmc.h"
 
 
@@ -24,6 +26,7 @@
 #define FMC_ADDR_RADAR_DATA_FLAG		(53)
 #define FMC_ADDR_CNN_DATA_FLAG			(54)
 
+#endif
 
 
 #endif /* INC_FPGA_DEFINE_H_ */

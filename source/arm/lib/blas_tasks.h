@@ -14,15 +14,19 @@ extern "C"
 
 #include "task_define.h"
 
+
+#ifdef _FREERTOS
 #include "cmsis_os.h"
+
+SemaphoreHandle_t semFFT;
+SemaphoreHandle_t semCNN;
+#endif
 
 #define VITAL_WIN_LEN	(800)
 #define VITAL_FPS		(20)
 #define VITAL_FFT_N		(64)
 
 
-SemaphoreHandle_t semFFT;
-SemaphoreHandle_t semCNN;
 
 //  --- FIR --- //
 // order: 256 by default

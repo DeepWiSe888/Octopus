@@ -4,9 +4,10 @@
  */
 
 #include "task_sync.h"
+#include "captain.h"
 
 
-#define _FREE_RTOS
+//#define _FREE_RTOS
 //#define _LINUX
 
 
@@ -59,7 +60,7 @@ int waitSemaphore(uint32_t semNo, int waitTime_ms)
 
 	return 0;
 }
-int giveSamphore(uint32_t semNo)
+int giveSemaphore(uint32_t semNo)
 {
 	if(semNo>MAX_SEMAPHORE)
 		return SEMAPHORE_ERR_TOOMANY;
@@ -96,9 +97,78 @@ int createTaskThread(const char* taskName, THREAD_FUN threadFun, void* param)
 ///////////////////////////////////////////////////////////////////////////
 
 #ifdef _LINUX
-int createTaskThread(THREAD_FUN threadFun, void* param)
-{
 
+#include <pthread.h>
+#include <semaphore.h>
+#include <stdio.h>
+
+// why sem_t* : sem_init not works at osx
+sem_t* g_sem[MAX_SEMAPHORE] = {0};
+
+sem_t* getSemaphore(int no)
+{
+    if(no>MAX_SEMAPHORE)
+        return 0;
+    if(g_sem[no]==0)
+    {
+        char szSem[32];
+        sprintf(szSem, "sem%d", no);
+        g_sem[no] = sem_open("/mysem", O_CREAT, S_IRUSR | S_IWUSR, 10);
+    }
+    return g_sem[no];
+}
+
+
+int waitSemaphore(uint32_t semNo, int waitTime_ms)
+{
+    if(semNo>MAX_SEMAPHORE)
+        return SEMAPHORE_ERR_TOOMANY;
+    sem_t* sem = getSemaphore(semNo);
+
+    sem_wait(sem);
+
+    return 0;
+}
+int giveSemaphore(uint32_t semNo)
+{
+    if(semNo>MAX_SEMAPHORE)
+        return SEMAPHORE_ERR_TOOMANY;
+
+    sem_t* sem = getSemaphore(semNo);
+    sem_post(sem);
+    return 0;
+}
+
+
+// construct a linux-style thread function //
+//    rtos sytle: void fun(void*)
+// -> linux style: void* fun(void*)
+// these code sucks but no better idea
+typedef  struct _linux_thread_param
+{
+    THREAD_FUN funptr;
+    void* param;
+} linux_thread_param;
+void* linux_thread_fun(void* param)
+{
+    linux_thread_param* ltp = (linux_thread_param*)param;
+
+    THREAD_FUN threadFun = ltp->funptr;
+    void* funParm = ltp->param;
+    if(threadFun)
+        threadFun(funParm);
+
+    taskMemFree(ltp);
+
+    return 0;
+}
+
+int createTaskThread(const char* taskName, THREAD_FUN threadFun, void* param)
+{
+    linux_thread_param* ltp = (linux_thread_param*)taskMemAlloc(sizeof(linux_thread_param));
+    pthread_t p;
+    pthread_create(&p, 0, linux_thread_fun, ltp);
+    return 0;
 }
 
 #endif

@@ -11,7 +11,10 @@
 #include "captain.h"
 #include <math.h>
 #include <stdint.h>
-#include <arm_math.h>
+
+#ifdef _ARM_SIMD
+//#include <arm_math.h>
+#endif
 
 #ifndef pi
 #define pi	(3.14)
@@ -139,6 +142,7 @@ int fir(float fps,int numtaps, float fp, float fs,int len,Complex *x,Complex *y 
 	float k[FIR_N];
 	firwin(FIR_N, npyfp, npyfs, k);
 
+#ifdef _ARM_SIMD
 	// init fir
 	arm_fir_instance_f32 s;
 	int blockSize = 128;
@@ -150,9 +154,9 @@ int fir(float fps,int numtaps, float fp, float fs,int len,Complex *x,Complex *y 
     {
         arm_fir_f32(&s, x + (i * blockSize), y + (i * blockSize), blockSize);
     }
-
-
 	taskMemFree(state);
+#endif
+
 
 
 	return 0;

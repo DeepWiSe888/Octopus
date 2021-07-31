@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "task_sync.h"
-#include "cmsis_os.h"
 
 typedef struct _run_task_param
 {

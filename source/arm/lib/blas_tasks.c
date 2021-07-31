@@ -139,10 +139,12 @@ task_info createTaskVMD(void* input)
 	ti.output = taskMemAlloc((VITAL_WIN_LEN+VITAL_FFT_N)*sizeof(complex)); //2*windowlen*complex, for fft/fir wave
 	ti.params = 0;
 	ti.func_ptr = vitalVMD;
+
+	return ti;
 }
 
 
-
+#ifdef _USE_FPGA
 int vitalVMD(task_info *ti)
 {
 	// wait for i/o interrupt
@@ -201,6 +203,12 @@ int vitalVMD(task_info *ti)
     fpga_write(FMC_ADDR_RADAR_DATA_FLAG,0);
 	return 0;
 }
+#else
+int vitalVMD(task_info *ti)
+{
+    return 0;
+}
+#endif
 
 
 // --- CNN People Counting --- //

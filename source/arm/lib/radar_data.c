@@ -10,7 +10,22 @@
 #include <math.h>
 #include <stdlib.h>
 #include "fpga_define.h"
+
+#ifdef _X4DRIVER
+
 #include "x4driver.h"
+int radarInit()
+{
+	Radar();
+	return 0;
+}
+#else
+
+int radarInit()
+{
+    return 0;
+}
+#endif
 
 
 float randData()
@@ -55,10 +70,3 @@ void* getRadarDataAddr(radar_info* radarInfo)
 
 
 
-
-
-int radarInit()
-{
-	Radar();
-	return 0;
-}
