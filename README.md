@@ -8,7 +8,7 @@ STM32CubeIDE, STM32CubeMX, Intel Quartus II
 hardware: The schematics of antenna array design.<br>
 source: The source code of ARM and FPGA.<br>
 source/arm: A lightweight DAG-scheduler based on FreeRTOS.<br>
-source/lib: Basic DSP and MISC. for ARM signal process. More description of ARM code is located in this folder.<br>
+source/lib: Basic DSP, AI and MISC. for ARM signal process. More description of ARM code is located in this folder.<br>
 source/FPGA: DSP and CNN for FPGA signal process. More description of FPGA code is located in this folder.<br>
 source/example: Two examples for vital sign estimation and occupancy.<br>
 
