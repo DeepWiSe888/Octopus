@@ -10,6 +10,12 @@ Octopus's system architecture is shown as below. In our design, we first build a
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/arch.png)
 
+Below Figure shows more details about Antenna Board Controller (ABC). 
+
+![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/aac.png)
+
+ABC includes three components: Hybrid Array Controller (HAC), Antenna Array Controller (AAC) and Multiple SPI Controller (MSC).  HAC is the key component to schedule antenna array and multiple X4 chips, and it also collects the RX data from MSC to construct packets with specific format. AAC utilizes multiple GPIOs to control RF switch to obtain a *time-division* antenna array.  MSC is used to communicate with X4 chips via SPI buses, and reconfigure X4 chips according to application requirements.  
+
 # Design Files & Codes
 
 This repository includes some folders.
