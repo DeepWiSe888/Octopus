@@ -46,7 +46,16 @@ typedef struct _task_info{
 	void* output;       // alloc memory during task building; use as matrix recommanded
     void* params;       // use by task func_ptr
 	int   node;
+    int   runFlag;      // TASK_RUNNING_FLAGS
 }task_info;
+
+enum TASK_RUNNING_FLAGS
+{
+    TASK_FLAG_WAIT = 0,
+    TASK_FLAG_RUNNING = 1,
+    TASK_FLAG_FINISH = 2,
+    TASK_FLAG_RUNERROR = 3,
+};
 
 typedef struct _task_list{      // maybe i'll use acyclic_graph or tree finnaly,
 	task_info* taskInfo;        // but now list for quick performing.

@@ -13,6 +13,8 @@ extern "C"
 
 #include <stdint.h>
 
+
+// --- SEMAPHORE --- //
 #define	SEMAPHORE_ERR_OK         (0)
 #define	SEMAPHORE_ERR_TIMEOVER   (1)
 #define	SEMAPHORE_ERR_TOOMANY    (2)
@@ -26,8 +28,12 @@ int giveSemaphore(uint32_t semNo);
 int getNextFreeSemaphoreNo();
 
 
+// --- Thread Function --- //
 typedef void(*THREAD_FUN)(void const *);
 int createTaskThread(const char* taskName, THREAD_FUN threadFun, void* param);
+
+// --- UTILS --- //
+void taskSleep(int milliseconds);
 
 
 

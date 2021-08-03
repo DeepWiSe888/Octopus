@@ -84,6 +84,12 @@ int createTaskThread(const char* taskName, THREAD_FUN threadFun, void* param)
 	return 0;
 }
 
+
+void taskSleep(int milliseconds)
+{
+    osDelay(milliseconds);
+}
+
 #endif
 
 
@@ -166,9 +172,18 @@ void* linux_thread_fun(void* param)
 int createTaskThread(const char* taskName, THREAD_FUN threadFun, void* param)
 {
     linux_thread_param* ltp = (linux_thread_param*)taskMemAlloc(sizeof(linux_thread_param));
+    ltp->funptr = threadFun;
+    ltp->param = param;
     pthread_t p;
     pthread_create(&p, 0, linux_thread_fun, ltp);
     return 0;
+}
+
+
+#include <unistd.h>
+void taskSleep(int milliseconds)
+{
+    usleep(milliseconds*1000);
 }
 
 #endif

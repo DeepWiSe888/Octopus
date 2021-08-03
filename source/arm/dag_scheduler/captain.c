@@ -22,6 +22,9 @@ void startTaskThread(void const * argument)
 
 	task_info *ti = runParam->taskInfo;
 	int taskNode = ti->node;
+	ti->runFlag = TASK_FLAG_WAIT;
+
+	printf("task [%s] wait semaphore...", ti->func_name);
 
 	// --- check semaphore take --- //
 	task_sem_list *si = runParam->semList;
@@ -32,11 +35,15 @@ void startTaskThread(void const * argument)
 		si = si->next;
 	}
 
+    printf("task [%s] running...", ti->func_name);
+    ti->runFlag = TASK_FLAG_RUNNING;
 	// --- run task function --- //
     typedef int(*TASK_FUN)(task_info*);
     TASK_FUN pf = (TASK_FUN)(ti->func_ptr);
     pf(ti);
 
+    printf("task [%s] done...", ti->func_name);
+    ti->runFlag = TASK_FLAG_FINISH;
     // --- check give semaphore --- //
     si = runParam->semList;
 	while(si)
@@ -60,9 +67,8 @@ int runTask(task_info* ti, task_flow* tf)
 
     char szTaskThread[32];
     sprintf(szTaskThread, "taskThread%d", ti->node);
-    createTaskThread(szTaskThread, startTaskThread, &runParam);
+    createTaskThread(szTaskThread, startTaskThread, runParam);
 
-	//startTaskThread(&runParam);
     return 0;
 }
 
@@ -98,6 +104,7 @@ int addRadarInputDescribe(char* radarDescrib, task_flow* taskFlow) // "sig=iq, f
 
 int addTaskNode(char taskNode, task_info* taskInfo, task_flow* tf)
 {
+    taskInfo->runFlag = TASK_FLAG_WAIT;
 	taskInfo->node = taskNode;
 	// first one
 	if(tf->taskList.taskInfo==0)
@@ -162,6 +169,18 @@ int runTaskFlow(task_flow* taskFlow, int maxTimeOut)
         resultData = taskList->taskInfo->output;
         taskList = taskList->next;
     }
+
+    // wait each task thread finished.
+    taskList = &taskFlow->taskList;
+    while(taskList)
+    {
+        while (taskList->taskInfo->runFlag==TASK_FLAG_WAIT||taskList->taskInfo->runFlag==TASK_FLAG_RUNNING)
+        {
+            taskSleep(10);
+        }
+        taskList = taskList->next;
+    }
+
     //outputs
 
 	return 0;
