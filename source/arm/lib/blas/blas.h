@@ -15,11 +15,27 @@ extern "C"
 #include "task_define.h"
 
 
+typedef float   datatype;
+
 // ------- data defines ------- //
 typedef struct _complex{
-    float i;
-    float q;
+    datatype i;
+    datatype q;
 }complex,Complex;
+
+// +
+void complex_add(complex*a, complex*b, complex* out);
+// -
+void complex_sub(complex*a, complex*b, complex* out);
+// *
+void complex_mul(complex*a, complex*b, complex* out);
+
+void complex_mul_expjx(complex*a, datatype x, complex* out);
+
+datatype complex_abs(complex* a);
+datatype complex_angle(complex* a);
+
+
 
 //matrix complex
 #define MAX_DIM_CNT	(5)
@@ -33,10 +49,10 @@ typedef struct _mat_c{
 
 //matrix real float
 typedef struct _mat_r{
-    char	mat_info[32]; //'real'
-    int 	dim_cnt;
-    int 	dims[MAX_DIM_CNT];
-    float* 	data;
+    char	    mat_info[32]; //'real'
+    int 	    dim_cnt;
+    int 	    dims[MAX_DIM_CNT];
+    datatype* 	data;
 }matr;
 
 
@@ -68,26 +84,6 @@ int getMatSize(void* pMat);
 
 //test
 void printMat(matc* mc);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ------- filter -------- //
-#define FIR_N	(127)
-// (frames_per_sec, n SHOULD BE 127, freq_pass,freq_stop, sig_length, sig_in, sig_out);
-int fir(float fps,int numtaps, float fp, float fs,int len,Complex *x,Complex *y );
-
-
 
 
 #ifdef  __cplusplus

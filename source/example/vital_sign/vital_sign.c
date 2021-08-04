@@ -12,15 +12,28 @@
 #include "blas_tasks.h"
 #include "radar_data.h"
 #include "blas.h"
+#include "linear_math.h"
 
+
+typedef struct _get_vital_param
+{
+    matc*   mFFT;
+    matc*   mVMD;
+} get_vital_param;
 int getVital(task_info * ti)
 {
+    get_vital_param * param = (get_vital_param*)ti->input;
+    matc* mFFT = param->mFFT;
+    matc* mVMD = param->mVMD;
+    taskMemFree(param);
+
     matc *mOut = (matc*)ti->output;
     float rpm = 0;
     float bpm = 0;
 
-    complex* firdata = (complex*)ti->output;
-    complex* fftdata = (complex*)(firdata+VITAL_WIN_LEN);
+    complex* vmdRPM = (complex*)(&M2V(mVMD, 0, 0));
+    complex* vmdBPM = (complex*)(&M2V(mVMD, 1, 0));
+    complex* fftdata = (complex*)(&M1V(mFFT, 0));
 
     //freq = p*fps/fftn
     int beginFreqRpm = floor((8.0/60)*VITAL_FFT_N/VITAL_FPS);
@@ -59,14 +72,17 @@ int getVital(task_info * ti)
     return 0;
 }
 
-task_info createTaskGetRpmBpm(void* input)
+task_info createTaskGetRpmBpm( void* mat1c_vmd, void* mat1c_fft)
 {
     //build task
     task_info ti;
     bzero(&ti, sizeof(ti));
     strcpy(ti.func_name, "getVital");
     ti.func_ptr = getVital;
-    ti.input = input;
+    get_vital_param * param = (get_vital_param*)taskMemAlloc(sizeof(get_vital_param));
+    param->mFFT = mat1c_fft;
+    param->mVMD = mat1c_vmd;
+    ti.input = param;
 
     //out complex data as rpm + 1j*bpm
     ti.output = createMat1C(1);
@@ -75,11 +91,41 @@ task_info createTaskGetRpmBpm(void* input)
 }
 
 
+/*****
+ *  getVitalBin
+ *  algorithm : find max std one.
+ */
 int getViatalBin(task_info* ti)
 {
+    //get radar iq mat
+    matc* iqmat = (matc*)ti->input;
+    if(iqmat->dim_cnt!=2)
+    {
+        return -1;
+    }
+
+    int frames = iqmat->dims[0];
+    int rangebins = iqmat->dims[1]; // continuous memory at one frame
+    if(rangebins>100)
+        rangebins = 100;
+
+    // do 2d std
+    int i;
+    float binVals[100]={0};
+    stdc2d(iqmat, 0, binVals);
+
+    // find vital bin
+    int binInx = findMax(binVals, rangebins);
+    if(binInx<0||binInx>=rangebins)
+        return -2;
+
+    // write output.
     matc* val = (matc*)ti->output;
-    M1V(val, 0).i = 5;
-    M1V(val, 0).q = 0;
+    for(i=0;i<frames;i++)
+    {
+        M1V(val, i).i = M2V(iqmat, i, binInx).i;
+        M1V(val, i).q = M2V(iqmat, i, binInx).q;
+    }
     return 0;
 }
 
@@ -93,7 +139,7 @@ task_info createTaskGetVitalBin(void* input)
     ti.input = input;
 
     //out complex data as bin_inx + 1j*0
-    ti.output = createMat1C(1);;
+    ti.output = createMat1C(VITAL_WIN_LEN);;
 
     return ti;
 }
@@ -103,24 +149,38 @@ int vitalSignDetect()
 {
 	printf("create vital sign task flow...\n");
 	task_flow tf = createTaskFlow("vs");
-	//addRadarInput("{,}");
+
+	// - use simulate radar data - //
 	void* radarDataPtr = getRadarDataAddr(0);
+
+	// - taskFindVitalBin:   input = radar iq mat;   output = vital bin iq - //
     task_info taskFindVitalBin = createTaskGetVitalBin(radarDataPtr);
-	task_info taskFIR = createTaskFIR(radarDataPtr, 256, "Hamming",1,2);
+
+    // - taskFIR:    input = iq vector;    output = iq vector- //
+	task_info taskFIR = createTaskFIR(taskFindVitalBin.output, 256, "Hamming",1,2);
+
+    // - taskFFT:    input = iq vector;    output = fft complex vector- //
 	task_info taskFFT = createTask1DFFT(taskFIR.output);
-	task_info taskVMD = createTaskVMD(0);
-	task_info taskGetVital = createTaskGetRpmBpm(taskFFT.output);
 
-	addTaskNode(1,&taskFIR, &tf);
-	addTaskNode(2,&taskFFT, &tf);
-	addTaskNode(3,&taskVMD, &tf);
-	addTaskNode(4,&taskGetVital, &tf);
-    addTaskNode(5,&taskFindVitalBin, &tf);
-	setPreTask(2,1, &tf);
-	setPreTask(3,2, &tf);
-    setPreTask(3,5, &tf);
-	setPreTask(4,3, &tf);
+    // - taskVMD:    input = iq vector;    output = iq vector- //
+	task_info taskVMD = createTaskVMD(taskFindVitalBin.output);
 
+    // - taskGetVital:    input = iq vector+fft vector;    output = complex value - //
+	task_info taskGetVital = createTaskGetRpmBpm(taskVMD.output, taskFFT.output);
+
+
+    addTaskNode(1,&taskFindVitalBin, &tf);
+	addTaskNode(2,&taskFIR, &tf);
+	addTaskNode(3,&taskFFT, &tf);
+	addTaskNode(4,&taskVMD, &tf);
+	addTaskNode(5,&taskGetVital, &tf);
+	// FindVitalBin --> FIR --> FFT --> |
+	//             |--> VMD ----------> | ---> GetVital
+    TASK_DEPENDACE(taskFIR,      taskFindVitalBin, &tf)
+    TASK_DEPENDACE(taskFFT,      taskFIR,          &tf)
+    TASK_DEPENDACE(taskVMD,      taskFindVitalBin, &tf)
+    TASK_DEPENDACE(taskGetVital, taskFFT,          &tf)
+    TASK_DEPENDACE(taskGetVital, taskVMD,          &tf)
 
 	printf("run vital sign tasks...\n");
 

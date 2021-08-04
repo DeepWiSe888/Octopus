@@ -131,7 +131,11 @@ int waitSemaphore(uint32_t semNo, int waitTime_ms)
         return SEMAPHORE_ERR_TOOMANY;
     sem_t* sem = getSemaphore(semNo);
 
-    sem_wait(sem);
+    int nWait = sem_wait(sem);
+    if(nWait<0)
+    {
+        printf("sem error.\n");
+    }
 
     return 0;
 }

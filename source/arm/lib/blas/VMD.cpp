@@ -366,6 +366,7 @@ void testVMD()
 
 int VMD_vital(float* data, int len, float* outBreath, float* outHeart)
 {
+    return 0;
 	MatrixXd u;
 	MatrixXcd u_hat;
 	MatrixXd omega;
