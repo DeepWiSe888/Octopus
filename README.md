@@ -24,7 +24,7 @@ hardware: this folder contains the schematics of antenna array design.<br>source
 
 
 # Credits
-We learn and use some nice open source works in our project. The reference works are listed below. If you find your code or project are involved by us, please let us know. Thanks!
+This application uses Open Source components. You can find the source code of their open source projects along with license information below. We acknowledge and are grateful to these developers for their contributions to open source.
 
 [1]https://github.com/DodgeHo/VMD_cpp<br>
 [2]https://eigen.tuxfamily.org/<br>
