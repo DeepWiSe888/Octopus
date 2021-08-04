@@ -6,7 +6,7 @@ STM32CubeIDE, STM32CubeMX, Intel Quartus II
 
 # System Architecture
 
-Octopus's system architecture is shown as below. In our design, we first build a hybrid MIMO system based on multiple XeThru X4 Ultra Wide Band (UWB) radar SoC radar chips[4] and Analog Devices RF switches. Then, we employ an Intel FPGA to provide rich I/Os to control this hybrid array, and IP cores to complement our application’s performance such as computing and interfacing. For standalone purpose, we leverage an ARM-based CPU to run applications and communicate with FPGA via FMC interface. We also use an lightweight Directed Acyclic Graph (DAG)-based scheduler in C/C++ to enable applications easily.
+Octopus's system architecture is shown as below. The architecture has two major parts: the large-scale MIMO and digital processing module. The former employs multiple XeThru X4 Ultra Wide Band (UWB) radar SoC radar chips[4] and Analog Devices RF switches to transmit and receive RF signals. The latter includes a heterogeneous ARM-FPGA architecture for configuring and controlling the MIMO radio, as well as for accelerating digital processing. We use Intel FPGA which provides rich I/Os for controlling the hybrid array, and use IP cores to complement our application’s performance such as computing and interfacing. To run the applications in a standalone mode, we leverage an ARM-based CPU to run applications and communicate with FPGA via FMC interface. We also use an lightweight Directed Acyclic Graph (DAG)-based scheduler in C/C++ to deploy applications easily.
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/arch.png)
 
@@ -23,7 +23,7 @@ This repository includes some folders.
 hardware: this folder contains the schematics of antenna array design.<br>source: this folder contains the source code of ARM and FPGA.<br>source/arm: this subfolder contains a lightweight DAG-scheduler based on FreeRTOS.<br>source/lib: this subfolder contains basic DSP and MISC for ARM signal processing. More details of ARM code can be found therein.<br>source/FPGA: this subfolder contains DSP and CNN for FPGA signal processing. More details of FPGA code can be found therein.<br>source/example: this subfolder contains two examples of vital sign estimation and occupancy awareness.<br>
 
 
-# Reference Works
+# Credits
 We learn and use some nice open source works in our project. The reference works are listed below. If you find your code or project are involved by us, please let us know. Thanks!
 
 [1]https://github.com/DodgeHo/VMD_cpp<br>
