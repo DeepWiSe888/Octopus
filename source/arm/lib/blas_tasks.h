@@ -24,7 +24,7 @@ SemaphoreHandle_t semCNN;
 
 #define VITAL_WIN_LEN	(800)
 #define VITAL_FPS		(20)
-#define VITAL_FFT_N		(64)
+#define VITAL_FFT_N		(256)
 
 
 

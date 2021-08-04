@@ -12,6 +12,7 @@
 #include "blas.h"
 #include "VMD.h"
 #include "fpga_define.h"
+#include "filter.h"
 
 
 // FIR
@@ -66,16 +67,12 @@ int FIR(task_info *ti)
     matc * mIn = (matc*)ti->input;
     matc * mOut = (matc*)ti->output;
 
-    // lots of codes for fir window steps
-    memcpy(mOut->mat_describe, mIn->mat_describe, sizeof(mIn->mat_describe));
-    memcpy(mOut->dims, mIn->dims, sizeof(mIn->dims));
-    mOut->dim_cnt = mIn->dim_cnt;
-    int matsize = 1;
-    int i;
-    for(i=0;i<mIn->dim_cnt;i++)
-        matsize = matsize*mIn->dims[i];
-    //just copy data
-    memcpy(mOut->data, mIn->data, matsize*sizeof(complex));
+    filter_info* filterInfo = (filter_info*)ti->params;
+
+    complex *x = &(M1V(mIn,0));
+    complex *y = &(M1V(mOut,0));
+
+    fir_bandpass(VITAL_FPS, FIR_N, filterInfo->lowStopHz , filterInfo->highStopHz , mIn->dims[0], x, y);
 
 	return 0;
 }
@@ -100,7 +97,8 @@ task_info createTask1DFFT(void* input)
 #else
     ti.func_ptr = FFT1D;
     ti.input = input;
-    ti.output = createSameMat(input);//taskMemAlloc(getMatSize(input));
+    //ti.output = createSameMat(input);
+    ti.output = createMat1C(VITAL_FFT_N);
     ti.params = 0;
 #endif
 
@@ -117,11 +115,18 @@ int FFT1D_useFPGA(task_info *ti)
 
 int FFT1D(task_info *ti)
 {
-    matc* matIn = (matc*)ti->input;
-    int N = matIn->dims[0];
+    matc* mIn = (matc*)ti->input;
+    matc* mOut = (matc*)ti->output;
+    int N = mOut->dims[0];
+    if(N!=VITAL_FFT_N)
+    {
+        //something wrong.
+        return -1;
+    }
 
-    // just copy data.
-    return FIR(ti);
+    complex *x = &(M1V(mIn,0));
+    complex *y = &(M1V(mOut,0));
+
 	return 0;
 }
 
@@ -135,8 +140,8 @@ task_info createTaskVMD(void* input)
     task_info ti;
     bzero(&ti, sizeof(ti));
     strcpy(ti.func_name, "VMD");
-	ti.input = 0;
-	ti.output = taskMemAlloc((VITAL_WIN_LEN+VITAL_FFT_N)*sizeof(complex)); //2*windowlen*complex, for fft/fir wave
+	ti.input = input;
+	ti.output = createMat2C(2, VITAL_WIN_LEN); // one rpm, one bpm
 	ti.params = 0;
 	ti.func_ptr = vitalVMD;
 
@@ -206,10 +211,25 @@ int vitalVMD(task_info *ti)
 #else
 int vitalVMD(task_info *ti)
 {
-    //float* srcAbs = (float*)ti->input;
-    //float rpmWave[VITAL_WIN_LEN];
-    //float bpmWave[VITAL_WIN_LEN];
-    //VMD_vital(srcAbs, VITAL_WIN_LEN, rpmWave, bpmWave);
+    float srcAbs[VITAL_WIN_LEN];
+    float rpmWave[VITAL_WIN_LEN];
+    float bpmWave[VITAL_WIN_LEN];
+
+    matc* mIn = (matc*)ti->input;
+    matc* mOut = (matc*)ti->output;
+    int i;
+    for(i=0;i<VITAL_WIN_LEN;i++)
+        srcAbs[i] = complex_abs(&M1V(mIn, i));
+
+    VMD_vital(srcAbs, VITAL_WIN_LEN, rpmWave, bpmWave);
+
+    for(i=0;i<VITAL_WIN_LEN;i++)
+    {
+        M2V(mOut, 0, i).i = rpmWave[i];
+        M2V(mOut, 0, i).q = 0;
+        M2V(mOut, 1, i).i = bpmWave[i];
+        M2V(mOut, 1, i).q = 0;
+    }
     return 0;
 }
 #endif

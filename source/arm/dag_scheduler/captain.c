@@ -24,7 +24,7 @@ void startTaskThread(void const * argument)
 	int taskNode = ti->node;
 	ti->runFlag = TASK_FLAG_WAIT;
 
-	printf("task [%s] wait semaphore...", ti->func_name);
+	printf("task [%s] wait semaphore...\n", ti->func_name);
 
 	// --- check semaphore take --- //
 	task_sem_list *si = runParam->semList;
@@ -35,14 +35,14 @@ void startTaskThread(void const * argument)
 		si = si->next;
 	}
 
-    printf("task [%s] running...", ti->func_name);
+    printf("task [%s] running...\n", ti->func_name);
     ti->runFlag = TASK_FLAG_RUNNING;
 	// --- run task function --- //
     typedef int(*TASK_FUN)(task_info*);
     TASK_FUN pf = (TASK_FUN)(ti->func_ptr);
     pf(ti);
 
-    printf("task [%s] done...", ti->func_name);
+    printf("task [%s] done...\n", ti->func_name);
     ti->runFlag = TASK_FLAG_FINISH;
     // --- check give semaphore --- //
     si = runParam->semList;

@@ -23,6 +23,7 @@ int addRadarInput(radar_info *radarInfo, task_flow* taskFlow);
 int addRadarInputDescirbe(char* radarInfo, task_flow* taskFlow); // "sig=iq, fps=40, tx=1, rx=1, winlen=800"
 int addTaskNode(char taskNode, task_info* taskInfo, task_flow* taskFlow);
 int setPreTask(char taskNo, char preTaskNo, task_flow* taskFlow);
+#define TASK_DEPENDACE(_task_x, _pre_task_x, _task_flow_x)   setPreTask((_task_x).node,(_pre_task_x).node, (_task_flow_x));
 
 // --- run / destroy ---  //
 int runTaskFlow(task_flow* taskFlow, int maxTimeOut);
