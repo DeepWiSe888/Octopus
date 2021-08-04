@@ -53,9 +53,9 @@ int getVital(task_info * ti)
 	bpm = 1.0*iMax*VITAL_FPS/VITAL_FFT_N;
 
 
-    mOut->data[0].i = rpm;   //rpm=12
-    mOut->data[0].q = bpm;   //bpm=70;
-    //printf("rpm=%f, bpm=%f\n", 12.0, 70.0);
+    mOut->data[0].i = rpm;
+    mOut->data[0].q = bpm;
+    printf("rpm=%f, bpm=%f\n", rpm, bpm);
     return 0;
 }
 
@@ -69,12 +69,31 @@ task_info createTaskGetRpmBpm(void* input)
     ti.input = input;
 
     //out complex data as rpm + 1j*bpm
-    ti.output = taskMemAlloc(sizeof(matc));
-    matc* mOut = (matc*)ti.output;
-    mOut->dim_cnt = 1;
-    strcpy(mOut->mat_describe, "real");
-    mOut->dims[0]=1;
-    mOut->data = taskMemAlloc(sizeof(complex));
+    ti.output = createMat1C(1);
+
+    return ti;
+}
+
+
+int getViatalBin(task_info* ti)
+{
+    matc* val = (matc*)ti->output;
+    M1V(val, 0).i = 5;
+    M1V(val, 0).q = 0;
+    return 0;
+}
+
+task_info createTaskGetVitalBin(void* input)
+{
+    task_info ti;
+    bzero(&ti, sizeof(ti));
+
+    strcpy(ti.func_name, "findVitalBin");
+    ti.func_ptr = getViatalBin;
+    ti.input = input;
+
+    //out complex data as bin_inx + 1j*0
+    ti.output = createMat1C(1);;
 
     return ti;
 }
@@ -86,6 +105,7 @@ int vitalSignDetect()
 	task_flow tf = createTaskFlow("vs");
 	//addRadarInput("{,}");
 	void* radarDataPtr = getRadarDataAddr(0);
+    task_info taskFindVitalBin = createTaskGetVitalBin(radarDataPtr);
 	task_info taskFIR = createTaskFIR(radarDataPtr, 256, "Hamming",1,2);
 	task_info taskFFT = createTask1DFFT(taskFIR.output);
 	task_info taskVMD = createTaskVMD(0);
@@ -95,8 +115,10 @@ int vitalSignDetect()
 	addTaskNode(2,&taskFFT, &tf);
 	addTaskNode(3,&taskVMD, &tf);
 	addTaskNode(4,&taskGetVital, &tf);
+    addTaskNode(5,&taskFindVitalBin, &tf);
 	setPreTask(2,1, &tf);
 	setPreTask(3,2, &tf);
+    setPreTask(3,5, &tf);
 	setPreTask(4,3, &tf);
 
 

@@ -28,6 +28,20 @@ int dim3inx(int* dims, int m, int n, int k) {return (m)*dims[1]*dims[2]+(n)*dims
 int dim4inx(int* dims, int m, int n, int k, int p) {return (m)*dims[1]*dims[2]*dims[3]+(n)*dims[2]*dims[3]+(k)*dims[3]+k;}
 
 
+//vector infact
+matc* createMat1C(int M)
+{
+    complex * buf = (complex*)taskMemAlloc(M*sizeof(complex));
+    bzero(buf, M*sizeof(complex));
+
+    matc *mc = (matc*)taskMemAlloc(sizeof(matc));
+    bzero(mc, sizeof(matc));
+    strcpy(mc->mat_describe, "complex");
+    mc->dim_cnt = 1;
+    mc->dims[0] = M;
+    mc->data = buf;
+}
+
 matc* createMat2C(int M, int N)
 {
     complex * buf = (complex*)taskMemAlloc(M*N*sizeof(complex));

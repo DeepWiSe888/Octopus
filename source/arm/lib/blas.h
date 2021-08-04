@@ -51,6 +51,9 @@ int dim4inx(int* dims, int m, int n, int k, int p);
 #define M4V(m, i, j, k, p)  (m->data[dim4inx(m->dims, i,j,k,p)])
 
 
+//vector infact
+matc* createMat1C(int M);
+
 //m*n like : frames*range_bins
 matc* createMat2C(int M, int N);
 //m*n*p
