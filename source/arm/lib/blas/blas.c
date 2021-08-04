@@ -40,6 +40,8 @@ matc* createMat1C(int M)
     mc->dim_cnt = 1;
     mc->dims[0] = M;
     mc->data = buf;
+
+    return mc;
 }
 
 matc* createMat2C(int M, int N)
