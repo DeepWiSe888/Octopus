@@ -147,3 +147,18 @@ int getMatSize(void* pMat)
     return sizeof(matc);
 }
 
+
+#include <stdio.h>
+void printMat(matc* mc, const char* name)
+{
+    if(name)
+        printf("%s = [", name);
+    else
+        printf("mat = [");
+    int i;
+    complex * x = &M1V(mc, 0);
+    for (i = 0; i < mc->dims[0]; i++) {
+        printf("%f+%fi ", x[i].i, x[i].q);
+    }
+    printf("];\n");
+}

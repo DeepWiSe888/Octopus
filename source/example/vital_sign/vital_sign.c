@@ -37,7 +37,7 @@ int getVital(task_info * ti)
 
     //freq = p*fps/fftn
     int beginFreqRpm = floor((8.0/60)*VITAL_FFT_N/VITAL_FPS);
-    int endFreqRpm = ceil((8.0/60)*VITAL_FFT_N/VITAL_FPS);
+    int endFreqRpm = ceil((20.0/60)*VITAL_FFT_N/VITAL_FPS);
     int beginFreqBpm = floor((60.0/60)*VITAL_FFT_N/VITAL_FPS);
     int endFreqBpm = ceil((120.0/60)*VITAL_FFT_N/VITAL_FPS);
     int iMax = 0;
@@ -52,7 +52,7 @@ int getVital(task_info * ti)
     		maxVal = tmpVal;
     	}
     }
-    rpm = 1.0*iMax*VITAL_FPS/VITAL_FFT_N;
+    rpm = 60.*1.0*iMax*VITAL_FPS/VITAL_FFT_N;
     maxVal = 0;
 	for(i=beginFreqBpm;i<=endFreqBpm;i++)
 	{
@@ -63,7 +63,7 @@ int getVital(task_info * ti)
 			maxVal = tmpVal;
 		}
 	}
-	bpm = 1.0*iMax*VITAL_FPS/VITAL_FFT_N;
+	bpm = 60.*1.0*iMax*VITAL_FPS/VITAL_FFT_N;
 
 
     mOut->data[0].i = rpm;
@@ -111,7 +111,7 @@ int getViatalBin(task_info* ti)
 
     // do 2d std
     int i;
-    float binVals[100]={0};
+    float binVals[200]={0};
     stdc2d(iqmat, 0, binVals);
 
     // find vital bin

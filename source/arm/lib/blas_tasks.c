@@ -72,8 +72,10 @@ int FIR(task_info *ti)
     complex *x = &(M1V(mIn,0));
     complex *y = &(M1V(mOut,0));
 
-    fir_bandpass(VITAL_FPS, FIR_N, filterInfo->lowStopHz , filterInfo->highStopHz , mIn->dims[0], x, y);
 
+    fir_bandpass(VITAL_FPS, FIR_N, filterInfo->lowStopHz , filterInfo->highStopHz , mIn->dims[0], x, y);
+    printMat(mIn, "before_fir");
+    printMat(mOut, "after_fir");
 	return 0;
 }
 
@@ -126,6 +128,13 @@ int FFT1D(task_info *ti)
 
     complex *x = &(M1V(mIn,0));
     complex *y = &(M1V(mOut,0));
+
+    fftc2c(x, mIn->dims[0], y, N);
+    y[0].i = 0; y[0].q=0;
+    y[1].i = 0; y[1].q=0;
+    y[2].i = 0; y[2].q=0;
+    printMat(mIn, "before_fft");
+    printMat(mOut, "after_fft");
 
 	return 0;
 }

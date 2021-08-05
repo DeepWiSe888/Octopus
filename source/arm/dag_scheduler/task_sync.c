@@ -118,8 +118,8 @@ sem_t* getSemaphore(int no)
     if(g_sem[no]==0)
     {
         char szSem[32];
-        sprintf(szSem, "sem%d", no);
-        g_sem[no] = sem_open("/mysem", O_CREAT, S_IRUSR | S_IWUSR, 10);
+        sprintf(szSem, "/sem%d", no);
+        g_sem[no] = sem_open(szSem, O_CREAT, S_IRUSR | S_IWUSR, 0);
     }
     return g_sem[no];
 }

@@ -171,7 +171,7 @@ int fftr2c(int n,datatype *in, int len, Complex *result){
     }
     fftw_free(out);
 #else //} else if(sizeof(datatype) == sizeof(float)){
-    fftw_complex* out = (fftw_complex*) fftw_malloc(sizeof(fftwf_complex) * n);
+    fftw_complex* out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * n);
     fftw_plan p = fftw_plan_dft_r2c_1d(n,indata,out,FFTW_ESTIMATE);
     fftw_execute (p);
     fftw_destroy_plan(p);

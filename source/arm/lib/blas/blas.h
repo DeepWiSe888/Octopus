@@ -83,7 +83,7 @@ matc* createSameMat(void* inMat);
 int getMatSize(void* pMat);
 
 //test
-void printMat(matc* mc);
+void printMat(matc* mc, const char* name);
 
 
 #ifdef  __cplusplus
