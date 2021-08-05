@@ -30,19 +30,19 @@ int radarInit()
 
 float randData()
 {
-    return (1000+rand()%1000)/(1000*1000);
+    return (1000.0+rand()%1000)/(1000.0*1000);
 }
 //create sim data
 void* createSimData()
 {
     srand(123);
-    int fps = 20;
+    int fps = 40;
     int secs = 20;
     int rangebins = 138;
     //20*40*138
     matc *mc = createMat2C(fps*secs, rangebins);
     int i;
-    for(i=0;i<20*20*138;i++)
+    for(i=0;i<40*20*138;i++)
     {
         mc->data[i].i = randData();
         mc->data[i].q = randData();
@@ -53,8 +53,11 @@ void* createSimData()
     float freqBPM = 70/60.;
     for(i=0;i<fps*secs;i++)
     {
-        M2V(mc, i, vitalBin).i = 0.5*sin(freqRPM*i/fps);  //A*sin(wt);
-        M2V(mc, i, vitalBin).q += 0.1*cos(freqBPM*i/fps);
+        M2V(mc, i, vitalBin).i += 0.5*sin(2*3.14*freqRPM*i/fps);  //A*sin(wt);
+        M2V(mc, i, vitalBin).i += 0.1*sin(2*3.14*freqBPM*i/fps);
+
+        M2V(mc, i, vitalBin).q += 0.5*sin(2*3.14*freqRPM*i/fps);  //A*sin(wt);
+        M2V(mc, i, vitalBin).q += 0.1*sin(2*3.14*freqBPM*i/fps);
     }
     return mc;
 }

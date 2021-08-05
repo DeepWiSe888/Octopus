@@ -33,6 +33,7 @@ datatype stdc(complex *x, int len)
 
     return v;
 }
+
 void stdc2d(matc* m, int dim, float* out)
 {
     int i,j;
@@ -48,12 +49,10 @@ void stdc2d(matc* m, int dim, float* out)
 
     for(i=0;i<m->dims[1];i++)
     {
-        for(j=0;j<m->dims[0];j++)
-        {
             int len = m->dims[0];
             Complex sum={0,0};
-            int i;
-            for(i=0;i<len;i++)
+            int j;
+            for(j=0;j<len;j++)
             {
                 sum.i += M2V(m, j ,i).i;
                 sum.q += M2V(m, j ,i).q;
@@ -64,7 +63,7 @@ void stdc2d(matc* m, int dim, float* out)
 
             datatype v = 0;
             Complex diff;
-            for(i=0;i<len;i++)
+            for(j=0;j<len;j++)
             {
                 diff.i = M2V(m, j ,i).i - avg.i;
                 diff.q = M2V(m, j ,i).q - avg.q;
@@ -74,7 +73,7 @@ void stdc2d(matc* m, int dim, float* out)
             v = v/len; // var
             v = sqrt(v);
             out[i] = v;
-        }
+
     }
 }
 

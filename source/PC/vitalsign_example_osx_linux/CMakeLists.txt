@@ -10,7 +10,7 @@ set(CMAKE_C_STANDARD 99)
 #SET(CMAKE_SYSTEM_NAME Linux)
 #SET(CMAKE_SYSTEM_PROCESSOR arm)
 
-include_directories(. .. ../vital_sign ../../arm/dag_scheduler ../../arm/lib ../../arm/lib/blas /usr/local/include)
+include_directories(. .. ../../example/vital_sign ../../arm/dag_scheduler ../../arm/lib ../../arm/lib/blas /usr/local/include)
 
 link_directories(/usr/local/lib)
 
@@ -27,7 +27,7 @@ SET(lib_src
     ../../arm/lib/blas/filter.c)
 
 
-add_executable(vs ./main.c ../vital_sign/vital_sign.c ${dag_src} ${lib_src})
+add_executable(vs ./main.c ../../example/vital_sign/vital_sign.c ${dag_src} ${lib_src})
 
 target_link_libraries(vs m pthread fftw3)
 
