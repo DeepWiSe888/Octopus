@@ -20,7 +20,7 @@ ABC includes three components: Hybrid Array Controller (HAC), Antenna Array Cont
 
 This repository includes some folders.
 
-[hardware](https://github.com/DeepWiSe888/Octopus/tree/main/hardware): this folder contains the schematics of antenna array design. To be used together with source<br>
+[hardware](https://github.com/DeepWiSe888/Octopus/tree/main/hardware): this folder contains the schematics of antenna array design. To be used together with source.<br>
 [source](https://github.com/DeepWiSe888/Octopus/tree/main/source): this folder contains the source code of ARM and FPGA.<br>
 [source/arm](https://github.com/DeepWiSe888/Octopus/tree/main/source/arm): this subfolder contains a lightweight DAG-scheduler based on FreeRTOS.<br>
 [source/arm/lib](https://github.com/DeepWiSe888/Octopus/tree/main/source/arm/lib): this subfolder contains basic DSP and MISC for ARM signal processing. More details of ARM code can be found in it.<br>
