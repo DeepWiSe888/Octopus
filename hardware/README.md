@@ -4,6 +4,10 @@ We offer information about the hardware and tips on how to use the hardware. Mor
 
 ## Antenna Array Board
 
+![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png)
+
+Above figure is the main blocks of antenna array board. The LNAs and AMPs of Rx array are the option components for some special reqirements. 
+
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_board.png)
 
 - *Tx RF interface*: This interface provides the Tx radio that allows RF signals can be transmitted at range from 0 GHz and 8 GHz. 
