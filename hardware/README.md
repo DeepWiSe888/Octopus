@@ -6,7 +6,9 @@ We offer information about the hardware and tips on how to use the hardware. Mor
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png)
 
-Above figure is the top level schematic of antenna array board. The LNAs and AMPs of Rx array are the option components for some special reqirements. 
+Above figure is the top level schematic of antenna array board. The PA, LNAs and AMPs of Tx/Rx array are the option components for some special reqirements. 
+
+
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_board.png)
 
@@ -17,7 +19,7 @@ Above figure is the top level schematic of antenna array board. The LNAs and AMP
 - *Power*: The power jack is where the power supply that comes with power source.
 - *GND*: The ground is used to connect to other developing boards in ground plane.
 
-## X4 Testing Board
+## X4 Evaluation Board
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_board.png)
 
@@ -27,9 +29,14 @@ Above figure is the top level schematic of antenna array board. The LNAs and AMP
 - *Power*: The power jack is where the power supply that comes with power source.
 - *GND*: The ground is used to connect to other developing boards in ground plane.
 
+
+
+
+
 ## Design Files
 
 [*sch/X4_ArrayUnit.pdf*](https://github.com/DeepWiSe888/Octopus/blob/main/hardware/sch/X4_ArrayUnit.pdf): This  file is the schematic of the whole antenna array board.
 
 [*sch/X4_TestingBoard.pdf*](https://github.com/DeepWiSe888/Octopus/blob/main/hardware/sch/X4_TestingBoard.pdf): This file describe the testing RF switch board for loopback evaluation.
 
+[*sch/X4_DevBoard.pdf*](https://github.com/DeepWiSe888/Octopus/blob/main/hardware/sch/X4_DevBoard.pdf): This file is the X4 Evaluation Board
