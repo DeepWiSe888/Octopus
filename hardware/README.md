@@ -23,7 +23,7 @@ The above figure is the top-level schematic of antenna array board. The PA, LNAs
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_eval_block.png)
 
-The top-level schematic of X4 evaluation board is shown in the above figure. The Rx/Tx port of X4 chip is differential  output, and then the RF balun is applied to transform it to single Rx/Tx port.  Refer to the ADI [NCR2-123+](https://www.minicircuits.com/pdfs/NCR2-123+.pdf) for full specifications.
+The top-level schematic of X4 evaluation board is shown in the above figure. The Rx/Tx port of X4 chip is differential output, and then the RF balun is applied to transform it to single Rx/Tx port.  Refer to the ADI [NCR2-123+](https://www.minicircuits.com/pdfs/NCR2-123+.pdf) for full specifications.
 
 
 
@@ -37,7 +37,7 @@ The top-level schematic of X4 evaluation board is shown in the above figure. The
 
 ## X4 Chip Circuit Overview
 
-X4 chip is a radar transceiver SoC for UWB applications.  The internal circuit overview of X4 is shown in the below figure, and it also illustrates that why we design the hardware in the previous sections. This figure come from Page 12th of the X4 chip datasheet.
+X4 chip is a radar transceiver SoC for UWB applications.  The internal circuit overview of X4 is shown in the figure below, and it also illustrates that why we design the hardware in the previous sections. This figure come from Page 12th of the X4 chip datasheet.
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_circuit.jpg)
 
