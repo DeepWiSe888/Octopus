@@ -49,7 +49,7 @@ The Tx data path of the X4 consists of a pulse generator that is capable of gene
 
 ### Rx Data Path
 
-The Rx data path of the X4 consists of a Low Noise Amplifier (LNA), a Digital-to-Analog Converter (DAC) for threshold setting, 1536 parallel comparators/samplers and digital integrators as well as an output memory buffer, accessible through the SPI. The Rx is tightly integrated with the transmitter (Tx) and is designed for coherent integration of the received energy.
+The Rx data path of the X4 includes a Low Noise Amplifier (LNA), a Digital-to-Analog Converter (DAC) for setting thresholding, 1536 parallel comparators/samplers and digital integrators, as well as an output memory buffer, which is accessible through the SPI. The Rx is tightly integrated with the transmitter (Tx) and is designed for coherent integration of the received energy.
 
 ### Clock
 
@@ -57,17 +57,17 @@ There are two types of clocks in the X4 chip: internal and external clocks. We s
 
 #### Internal Clock
 
-The crystal oscillator (XOSC) is designed for providing the radar transceiver core with a stable and accurate reference clock signal.  Following figure shows a typical block schematic when the X4 is clocked using the XOSC.
+The crystal oscillator (XOSC) is designed for providing the radar transceiver core with a stable and accurate reference clock signal.  In the figure below, we show a typical block schematic when the X4 is clocked using the XOSC.
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_interClock.jpg)
 
 #### External Clock
 
-- In XOSC bypass mode the radar core is clocked by an external low frequency clock source. This mode can be useful if there is already a clock signal available on the application PCB. The external clock input pin supports single-ended inputs. Following figure shows a typical block schematic when the X4 is clocked using the XOSC bypass mode.
+- In XOSC bypass mode the radar core is clocked by an external low frequency clock source. This mode can be useful if there is already a clock signal available on the application PCB. The external clock input pin supports single-ended inputs. In the figure below, we show a typical block schematic when the X4 is clocked using the XOSC bypass mode.
 
   ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock1.jpg)
 
-- In Common PLL bypass mode the radar transceiver core is clocked by an external high frequency clock from the LVDS interface on pins IO5 and IO6 and the Common PLL is bypassed. This allows multiple radars to stay synchronized which is a requirement for digital beamforming applications. Following figure shows a block diagram of the Common PLL in bypass mode.
+- In Common PLL bypass mode the radar transceiver core is clocked by an external high frequency clock from the LVDS interface on pins IO5 and IO6 and the Common PLL is bypassed. This allows multiple radars to stay synchronized which is a requirement for digital beamforming applications. In the figure below, we show a block diagram of the Common PLL in bypass mode.
 
   ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock2.jpg)
 
