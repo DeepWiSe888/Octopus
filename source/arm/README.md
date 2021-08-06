@@ -1,4 +1,4 @@
-# Embedded OS Source Codes for Octopus Project
+# Embedded OS Source Codes for Octopus
 This folder includes DAG scheduler system, basic linear algorithms, radar Hal driver, and user-code example for STM32F7 series.
 
 # DAG Scheduler
