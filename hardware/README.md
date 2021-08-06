@@ -75,7 +75,7 @@ For more information, please refer to X4 chip [datasheet](https://www.radartutor
 
 ## RF port
 
-A 50 ohm SMA jack is employed to connect to each RF interface. This connector is a standard thread and standard-polarity SMA jack.  
+A 50 ohm SMA jack is employed to connect to each RF interface. This connector is a standard-thread and standard-polarity SMA jack.  
 
 ## Power
 
