@@ -67,7 +67,7 @@ The crystal oscillator (XOSC) is designed for providing the radar transceiver co
 
   ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock1.jpg)
 
-- In Common PLL bypass mode the radar transceiver core is clocked by an external high frequency clock from the LVDS interface on pins IO5 and IO6 and the Common PLL is bypassed. This allows multiple radars to stay synchronized which is a requirement for digital beamforming applications. In the figure below, we show a block diagram of the Common PLL in bypass mode.
+- In Common PLL bypass mode the radar transceiver core is clocked by an external high frequency clock from the LVDS interface on pins IO5 and IO6 and the Common PLL is bypassed. This allows multiple radars to stay synchronized which is required for digital beamforming applications. In the figure below, we show a block diagram of the Common PLL in bypass mode.
 
   ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock2.jpg)
 
