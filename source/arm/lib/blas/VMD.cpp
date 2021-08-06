@@ -366,18 +366,33 @@ void testVMD()
 
 int VMD_vital(float* data, int len, float* outBreath, float* outHeart)
 {
-    return 0;
 	MatrixXd u;
 	MatrixXcd u_hat;
 	MatrixXd omega;
-	vectord signal;
-	double alpha = 0;
+	vectord signal(len);
+	int i,j;
+	for(i=0;i<len;i++)
+	    signal[i] = data[i];
+
+	double alpha = 2000;
 	double tau = 0;
-	int K = 0;
+	int K = 3;
 	int DC = 0;
-	int init = 0;
-	double tol = 0;
+	int init = 1;
+	double tol = 1e-7;
     VMD(u, u_hat, omega,
         signal, alpha, tau, K, DC, init, tol);
+    int nResult = u.rows();
+    int size = u.cols();
+    for(i=0;i<nResult;i++)
+    {
+        for(j=0;j<size;j++)
+        {
+            if(i==1)
+                outBreath[j] = u(i,j);
+            if(i==2)
+                outHeart[j] = u(i,j);
+        }
+    }
 	return 0;
 }

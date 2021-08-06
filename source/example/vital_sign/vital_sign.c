@@ -69,6 +69,22 @@ int getVital(task_info * ti)
     mOut->data[0].i = rpm;
     mOut->data[0].q = bpm;
     printf("rpm=%f, bpm=%f\n", rpm, bpm);
+
+
+    // print out rpm waveform / bpm waveform
+    printf("rpm=[");
+    for(i=0;i<VITAL_WIN_LEN;i++)
+    {
+        printf("%f ", complex_abs(vmdRPM+i));
+    }
+    printf("];\n");
+    printf("bpm=[");
+    for(i=0;i<VITAL_WIN_LEN;i++)
+    {
+        printf("%f ", complex_abs(vmdBPM+i));
+    }
+    printf("];\n");
+
     return 0;
 }
 
