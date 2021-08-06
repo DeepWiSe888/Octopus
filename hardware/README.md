@@ -45,15 +45,15 @@ X4 chip is a radar transceiver SoC for UWB applications.  The overview of X4 int
 
 ### Tx Data Path
 
-The Tx path of the X4 consists of a pulse generator capable of generating pulses at a rate of up to 60.75 MHz. The output frequency and bandwidth is designed to fit worldwide regulatory requirements.
+The Tx data path of the X4 consists of a pulse generator that is capable of generating pulses (max rate of 60.75 MHz). The center frequency and bandwidth of the output pulse is designed in compliance with worldwide RF regulations.
 
 ### Rx Data Path
 
-The Rx path of the X4 consists of a Low Noise Amplifier (LNA), a Digital-to-Analog Converter (DAC) for threshold setting, 1536 parallel comparators/samplers and digital integrators as well as an output memory buffer, accessible through the SPI. The Rx is tightly integrated with the transmitter (Tx) and is designed for coherent integration of the received energy.
+The Rx data path of the X4 consists of a Low Noise Amplifier (LNA), a Digital-to-Analog Converter (DAC) for threshold setting, 1536 parallel comparators/samplers and digital integrators as well as an output memory buffer, accessible through the SPI. The Rx is tightly integrated with the transmitter (Tx) and is designed for coherent integration of the received energy.
 
 ### Clock
 
-There are two kinds of clocks: internal and external clocks. 
+There are two types of clocks in the X4 chip: internal and external clocks. We shall elaborate on these clocks in the following:
 
 #### Internal Clock
 
