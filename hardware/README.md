@@ -19,8 +19,9 @@ The above figure is the top-level schematic of antenna array board. The PA, LNAs
 - *Power*: The power jack is used to connect to the power supply.
 - *GND*: The ground is used to connect to other developing boards in ground plane.
 
-## Principle of the MIMO radar
-
+## Principle of the MIMO Radar
+To understand the working principles of the MIMO radar, we first look at a simple example. In the simple antenna array, we have 1 Tx antenna and 4 Rx antennas, as shown below.
+![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo0.png)
 
 ## X4 Evaluation Board
 
