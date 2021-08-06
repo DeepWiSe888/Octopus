@@ -73,11 +73,11 @@ The crystal oscillator (XOSC) is designed for providing the radar transceiver co
 
 For more information, please refer to X4 chip [datasheet](https://www.radartutorial.eu/19.kartei/13.labs/pubs/x4_datasheet_revE_restricted.pdf).
 
-## RF port
+## RF Port
 
 A 50 ohm SMA jack is employed to connect to each RF interface. This connector is a standard-thread and standard-polarity SMA jack.  
 
-## Power
+## Power Supply
 
 All the boards requires an external 5V DC power supply. 
 
