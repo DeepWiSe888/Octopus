@@ -16,7 +16,7 @@ The bove figure is the top-level schematic of antenna array board. The PA, LNAs 
 - *Rx RF interface*: This interface connects to the Rx radio that allows RF signals to be received at range from 0 GHz and 8 GHz. 
 - *Tx switch I/Os*: The header pins are used for Tx antenna switching, and connected to FPGA for controlling. 
 - *Rx switch I/Os*: The header pins are used for Rx antenna switching, and connected to FPGA for controlling. 
-- *Power*: The power jack is where the power supply that comes with power source.
+- *Power*: The power jack is used to connect to the power supply.
 - *GND*: The ground is used to connect to other developing boards in ground plane.
 
 ## X4 Evaluation Board
