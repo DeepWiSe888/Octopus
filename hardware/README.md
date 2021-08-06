@@ -38,6 +38,12 @@ To generalize the previous discussion, with N<sub>Tx</sub> and N<sub>RX</sub> an
 
 If p<sub>m</sub> denotes the coordinates of the mth Tx antenna (m = 0, 1, ...N<sub>Tx</sub>), and q<sub>n</sub> denotes the coordinates of the n-th Rx antenna (n = 0, 1, 2, …N<sub>Rx</sub>), then the location of the virtual antennas can be computed as p<sub>m</sub>+q<sub>n</sub>, for all possible values of m and n. For example in Figure 5, p<sub>1</sub> = 0 and p<sub>2</sub> = 4, and q<sub>1</sub> = 0, q<sub>2</sub> = 1, q<sub>3</sub> = 2, and q<sub>4</sub> = 3 (where the coordinates are expressed in units of d, and the Tx1 (respectively Rx1) is assumed to be the origin for the Tx (respectively, Rx) antennas.
 
+The figure below shows the principle of MIMO radar can also be extended to multidimensional arrays.
+
+![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo3.png)
+
+Based on the above-mentioned analysis, each of Octopus antenna array can provide an equivalent of 2 x 7 x 2 = 28 virtual antennas.
+
 ## X4 Evaluation Board
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_eval_block.png)
