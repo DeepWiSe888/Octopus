@@ -37,7 +37,7 @@ The top-level schematic of X4 evaluation board is shown in the above figure. The
 
 ## X4 Chip Circuit Overview
 
-X4 chip is a radar transceiver SoC for UWB applications.  The internal circuit overview of X4 is shown in the figure below, and it also illustrates that why we design the hardware in the previous sections. This figure come from Page 12th of the X4 chip datasheet.
+X4 chip is a radar transceiver SoC for UWB applications.  The overview of X4 internal circuit is shown in the figure below. The figure also illustrates our hardware design rationale in the previous sections. This figure come from Page 12 of the X4 chip datasheet.
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_circuit.jpg)
 
