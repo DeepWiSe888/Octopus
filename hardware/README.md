@@ -75,11 +75,11 @@ For more information, please refer to X4 chip [datasheet](https://www.radartutor
 
 ## RF port
 
-The 50 ohm SMA jack is employed to connect to each RF interface. This connector is a standard thread and standard polarity, SMA jack.  
+A 50 ohm SMA jack is employed to connect to each RF interface. This connector is a standard thread and standard-polarity SMA jack.  
 
 ## Power
 
-All the boards requires an external 5VDC power supply. 
+All the boards requires an external 5V DC power supply. 
 
 ## Design Files
 
