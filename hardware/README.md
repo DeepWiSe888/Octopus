@@ -49,7 +49,7 @@ The Tx data path of the X4 consists of a pulse generator that is capable of gene
 
 ### Rx Data Path
 
-The Rx data path of the X4 includes a Low Noise Amplifier (LNA), a Digital-to-Analog Converter (DAC) for setting thresholding, 1536 parallel comparators/samplers and digital integrators, as well as an output memory buffer, which is accessible through the SPI. The Rx is tightly integrated with the transmitter (Tx) and is designed for coherent integration of the received energy.
+The Rx data path of the X4 includes a Low Noise Amplifier (LNA), a Digital-to-Analog Converter (DAC) for setting thresholds, 1536 parallel comparators/samplers and digital integrators, as well as an output memory buffer, which is accessible through the SPI interface. The Rx data path is closely integrated with the transmitter (Tx) and is designed for coherent integration of the received energy.
 
 ### Clock
 
