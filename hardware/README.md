@@ -29,8 +29,8 @@ The top  level schematic of X4 evaluation board is shown in the above figure. Th
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_board.png)
 
-- *Tx RF interface*: This interface provides the Tx radio that allows RF signals can be transmitted at 7.29 GHz with 1.4 GHz bandwidth.
-- *Rx RF interface*: This interface provides the Rx radio that allows RF signals can be received at 7.29 GHz with 1.4 GHz bandwidth.
+- *Tx RF interface*: This interface connects to the Tx radio that allows RF signals to be transmitted at 7.29 GHz with 1.4 GHz bandwidth.
+- *Rx RF interface*: This interface connects to the Rx radio that allows RF signals to be received at 7.29 GHz with 1.4 GHz bandwidth.
 - *X4 control I/Os*: The header pins includes SPI pins, clock synchronization pins, trigger pins, etc. which are connected to FPGA.
 - *Power*: The power jack is where the power supply that comes with power source.
 - *GND*: The ground is used to connect to other developing boards in ground plane.
