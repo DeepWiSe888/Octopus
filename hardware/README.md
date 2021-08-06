@@ -6,7 +6,7 @@ We offer information about the hardware and tips on how to use the hardware. For
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png)
 
-The bove figure is the top-level schematic of antenna array board. The PA, LNAs and AMPs of Tx/Rx array are optional components for some special reqirements. 
+The above figure is the top-level schematic of antenna array board. The PA, LNAs and AMPs of Tx/Rx array are optional components for some special reqirements. 
 
 
 
@@ -23,7 +23,7 @@ The bove figure is the top-level schematic of antenna array board. The PA, LNAs 
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_eval_block.png)
 
-The top  level schematic of X4 evaluation board is shown in the above figure. The Rx/Tx port of X4 chip is differential  output, and then the RF balun is applied to transform it to single Rx/Tx port.  Refer to the ADI [NCR2-123+](https://www.minicircuits.com/pdfs/NCR2-123+.pdf) for full specifications.
+The top-level schematic of X4 evaluation board is shown in the above figure. The Rx/Tx port of X4 chip is differential  output, and then the RF balun is applied to transform it to single Rx/Tx port.  Refer to the ADI [NCR2-123+](https://www.minicircuits.com/pdfs/NCR2-123+.pdf) for full specifications.
 
 
 
