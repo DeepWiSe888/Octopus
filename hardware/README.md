@@ -14,8 +14,8 @@ The above figure is the top-level schematic of antenna array board. The PA, LNAs
 
 - *Tx RF interface*: This interface connects to the Tx radio that allows RF signals to be transmitted at range from 0 GHz and 8 GHz. 
 - *Rx RF interface*: This interface connects to the Rx radio that allows RF signals to be received at range from 0 GHz and 8 GHz. 
-- *Tx switch I/Os*: The header pins are used for Tx antenna switching, and connected to FPGA for controlling. 
-- *Rx switch I/Os*: The header pins are used for Rx antenna switching, and connected to FPGA for controlling. 
+- *Tx switch I/Os*: The header pins are used for Tx antenna switching. FPGA sends the controlling signals through these I/O pins. 
+- *Rx switch I/Os*: The header pins are used for Rx antenna switching. FPGA sends the controlling signals through these I/O pins. 
 - *Power*: The power jack is used to connect to the power supply.
 - *GND*: The ground is used to connect to other developing boards in ground plane.
 
