@@ -34,6 +34,8 @@ Using MIMO concepts, the same result can be achieved with just one additional Tx
 
 In the above figure, the antenna array has two transmit antennas, Tx1 and Tx2. A transmission from Tx1 results in a phase of \[0 ω 2ω 3ω\] at the four RX antennas (with the first Rx antenna as a reference). Because the second Tx antenna (Tx2) is placed a distance of 4d from Tx1, any signal emanating from Tx2 traverses an additional path of length 4dsin(θ) compared to Tx1. Correspondingly, the signal at each Rx antenna sees an additional phase-shift of 4ω (with regard to transmission from Tx1). The phase of the signal at the four Rx antennas, due to a transmission from Tx2, is \[4ω 5ω 6ω 7ω\]. Concatenating the phase sequences at the four Rx antennas, due to transmissions from Tx1 and Tx2, gets the sequence \[0 ω 2ω 3ω 4ω 5ω 6ω 7ω\], which is the same sequence as the configuration of 1 Tx and eight Rx antennas. It can be said that the 2Tx – 4Rx antenna configuration synthesizes a virtual array of eight RX antennas (with one Tx antenna being implied).
 
+To generalize the previous discussion, with N<sub>TX</sub> and NRX antennas, users can generate (with proper antenna placement) a virtual antenna array of NTX X NRX. Thus, employing MIMO radar techniques, results in a multiplicative increase in the number of (virtual) antennas, and corresponds to improvement in the angle resolution.
+
 ## X4 Evaluation Board
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_eval_block.png)
