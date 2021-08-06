@@ -18,6 +18,8 @@ This example is written in c/c++ language.
 
 CMake (version 3.5 or above),  gcc and g++.
 
+ Using lib fftw3 , refer to  http://www.fftw.org/download.html.
+
 - ### Command Line Style
 
   `$vitalsign_example_osx_linux$ mkdir build`
@@ -26,7 +28,7 @@ CMake (version 3.5 or above),  gcc and g++.
 
   `$vitalsign_example_osx_linux\build$ cmake ..`
 
-  `$vitalsign_example_osx_linux$ make`
+  `$vitalsign_example_osx_linux\build$ make`
 
   
 
