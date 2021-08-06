@@ -1,7 +1,7 @@
-# Embedded OS source codes for Octopus Project
+# Embedded OS Source Codes for Octopus Project
 This folder includes DAG scheduler system, basic linear algorithms, radar Hal driver, and user-code example for STM32F7 series.
 
-# DAG scheduler
+# DAG Scheduler
 DAG task flow system kernel. You can find task examples at lib/blas_tasks.* .
 Task memory pool can be dynamic memory by os(mostly we use FreeRTOS), or PHY SRAM address.
 Remember destroying task flow at the end of task flow works.
