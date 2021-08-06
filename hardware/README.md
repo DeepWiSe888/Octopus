@@ -12,8 +12,8 @@ The bove figure is the top-level schematic of antenna array board. The PA, LNAs 
 
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_board.png)
 
-- *Tx RF interface*: This interface provides the Tx radio that allows RF signals can be transmitted at range from 0 GHz and 8 GHz. 
-- *Rx RF interface*: This interface provides the Rx radio that allows RF signals can be received at range from 0 GHz and 8 GHz. 
+- *Tx RF interface*: This interface connects to the Tx radio that allows RF signals to be transmitted at range from 0 GHz and 8 GHz. 
+- *Rx RF interface*: This interface connects to the Rx radio that allows RF signals to be received at range from 0 GHz and 8 GHz. 
 - *Tx switch I/Os*: The header pins are used for Tx antenna switching, and connected to FPGA for controlling. 
 - *Rx switch I/Os*: The header pins are used for Rx antenna switching, and connected to FPGA for controlling. 
 - *Power*: The power jack is where the power supply that comes with power source.
