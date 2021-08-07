@@ -9,8 +9,10 @@ We offer information about the hardware and tips on how to use the hardware. For
 The above figure is the top-level schematic of antenna array board. The PA, LNAs and AMPs of Tx/Rx array are optional components for some special reqirements. 
 
 
-
+<div align="center">
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_board.png)
+</div>
+
 
 - *Tx RF interface*: This interface connects to the Tx radio that allows RF signals to be transmitted at range from 0 GHz and 8 GHz. 
 - *Rx RF interface*: This interface connects to the Rx radio that allows RF signals to be received at range from 0 GHz and 8 GHz. 
