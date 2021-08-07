@@ -5,7 +5,7 @@ We offer information about the hardware and tips on how to use the hardware. For
 ## Antenna Array Board
 
 <p align="center">
-   <img src="[https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png]" alt="[YOUR_ALT]"/>
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png" alt="[YOUR_ALT]"/>
 </p>
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png)
 
