@@ -1,8 +1,3 @@
-img[src$="centerme"] {
-  display:block;
-  margin: 0 auto;
-}
-
 # Getting to Know the Hardware
 
 We offer information about the hardware and tips on how to use the hardware. For more details about the hardware, please refer to the schematics. Here, we just list the key components in the following pictures.
