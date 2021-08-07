@@ -7,11 +7,16 @@ We offer information about the hardware and tips on how to use the hardware. For
 <p align="center">
    <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png" alt="[YOUR_ALT]"/>
 </p>
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png)
+
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png) -->
 
 The above figure is the top-level schematic of antenna array board. The PA, LNAs and AMPs of Tx/Rx array are optional components for some special reqirements. 
 
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_board.png)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_board.png" alt="[YOUR_ALT]"/>
+</p>
+
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_board.png) -->
 
 - *Tx RF interface*: This interface connects to the Tx radio that allows RF signals to be transmitted at range from 0 GHz and 8 GHz. 
 - *Rx RF interface*: This interface connects to the Rx radio that allows RF signals to be received at range from 0 GHz and 8 GHz. 
@@ -23,11 +28,19 @@ The above figure is the top-level schematic of antenna array board. The PA, LNAs
 ## Principle of the MIMO Radar
 To understand the working principles of the MIMO radar, we first look at a simple example. In the simple antenna array, we have 1 Tx antenna and 4 Rx antennas, and the Rx antennas are separated by a distance of λ/2, as shown below.
 
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo0.png)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo0.png" alt="[YOUR_ALT]"/>
+</p>
+
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo0.png) -->
 
 If we want to double the angle resolution capability of the array, one possible solution is to double the number of Rx antenna, as shown in the figure below.
 
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo1.png)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo1.png" alt="[YOUR_ALT]"/>
+</p>
+
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo1.png) -->
 
 Using MIMO concepts, the same result can be achieved with just one additional Tx antenna, as shown below.
 
