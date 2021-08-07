@@ -4,6 +4,9 @@ We offer information about the hardware and tips on how to use the hardware. For
 
 ## Antenna Array Board
 
+<p align="center">
+   <img src="[https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png]" alt="[YOUR_ALT]"/>
+</p>
 ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/array_block.png)
 
 The above figure is the top-level schematic of antenna array board. The PA, LNAs and AMPs of Tx/Rx array are optional components for some special reqirements. 
