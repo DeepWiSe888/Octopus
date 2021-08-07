@@ -44,7 +44,11 @@ If we want to double the angle resolution capability of the array, one possible 
 
 Using MIMO concepts, the same result can be achieved with just one additional Tx antenna, as shown below.
 
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo2.png)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo2.png" alt="[YOUR_ALT]"/>
+</p>
+
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo2.png) -->
 
 In the above figure, the antenna array has two transmit antennas, Tx1 and Tx2. A transmission from Tx1 results in a phase of \[0 ω 2ω 3ω\] at the four RX antennas (with the first Rx antenna as a reference). Because the second Tx antenna (Tx2) is placed a distance of 4d from Tx1, any signal emanating from Tx2 traverses an additional path of length 4dsin(θ) compared to Tx1. Correspondingly, the signal at each Rx antenna sees an additional phase-shift of 4ω (with regard to transmission from Tx1). The phase of the signal at the four Rx antennas, due to a transmission from Tx2, is \[4ω 5ω 6ω 7ω\]. Concatenating the phase sequences at the four Rx antennas, due to transmissions from Tx1 and Tx2, gets the sequence \[0 ω 2ω 3ω 4ω 5ω 6ω 7ω\], which is the same sequence as the configuration of 1 Tx and eight Rx antennas. It can be said that the 2Tx – 4Rx antenna configuration synthesizes a virtual array of eight RX antennas (with one Tx antenna being implied).
 
@@ -54,19 +58,29 @@ If p<sub>m</sub> denotes the coordinates of the mth Tx antenna (m = 0, 1, ...N<s
 
 The figure below shows the principle of MIMO radar can also be extended to multidimensional arrays.
 
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo3.png)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo3.png" alt="[YOUR_ALT]"/>
+</p>
+
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/mimo3.png) -->
 
 Based on the above-mentioned analysis, each of Octopus antenna array can provide an equivalent of 2 x 7 x 2 = 28 virtual antennas.
 
 ## X4 Evaluation Board
 
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_eval_block.png)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_eval_block.png" alt="[YOUR_ALT]"/>
+</p>
+
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_eval_block.png) -->
 
 The top-level schematic of X4 evaluation board is shown in the above figure. The Rx/Tx port of X4 chip is differential output, and then the RF balun is applied to transform it to single Rx/Tx port.  Refer to the ADI [NCR2-123+](https://www.minicircuits.com/pdfs/NCR2-123+.pdf) for full specifications.
 
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_board.png" alt="[YOUR_ALT]"/>
+</p>
 
-
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_board.png)
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_board.png) -->
 
 - *Tx RF interface*: This interface connects to the Tx radio that allows RF signals to be transmitted at 7.29 GHz with 1.4 GHz bandwidth.
 - *Rx RF interface*: This interface connects to the Rx radio that allows RF signals to be received at 7.29 GHz with 1.4 GHz bandwidth.
@@ -78,7 +92,11 @@ The top-level schematic of X4 evaluation board is shown in the above figure. The
 
 X4 chip is a radar transceiver SoC for UWB applications.  The overview of X4 internal circuit is shown in the figure below. The figure also illustrates our hardware design rationale in the previous sections. This figure come from Page 12 of the X4 chip datasheet.
 
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_circuit.jpg)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_circuit.jpg" alt="[YOUR_ALT]"/>
+</p>
+
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_circuit.jpg) -->
 
 
 
@@ -98,17 +116,29 @@ There are two types of clocks in the X4 chip: internal and external clocks. We s
 
 The crystal oscillator (XOSC) is designed for providing the radar transceiver core with a stable and accurate reference clock signal.  In the figure below, we show a typical block schematic when the X4 is clocked using the XOSC.
 
-![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_interClock.jpg)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_interClock.jpg" alt="[YOUR_ALT]"/>
+</p>
+
+<!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_interClock.jpg) -->
 
 #### External Clock
 
 - In XOSC bypass mode the radar core is clocked by an external low frequency clock source. This mode can be useful if there is already a clock signal available on the application PCB. The external clock input pin supports single-ended inputs. In the figure below, we show a typical block schematic when the X4 is clocked using the XOSC bypass mode.
 
-  ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock1.jpg)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock1.jpg" alt="[YOUR_ALT]"/>
+</p>
+
+<!--   ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock1.jpg) -->
 
 - In Common PLL bypass mode the radar transceiver core is clocked by an external high frequency clock from the LVDS interface on pins IO5 and IO6 and the Common PLL is bypassed. This allows multiple radars to stay synchronized which is required for digital beamforming applications. In the figure below, we show a block diagram of the Common PLL in bypass mode.
 
-  ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock2.jpg)
+<p align="center">
+   <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock2.jpg" alt="[YOUR_ALT]"/>
+</p>
+
+<!--   ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_exClock2.jpg) -->
 
 For more information, please refer to X4 chip [datasheet](https://www.radartutorial.eu/19.kartei/13.labs/pubs/x4_datasheet_revE_restricted.pdf).
 
