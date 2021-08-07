@@ -119,7 +119,6 @@ The crystal oscillator (XOSC) is designed for providing the radar transceiver co
 <p align="center">
    <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_interClock.jpg" alt="[YOUR_ALT]"/>
 </p>
-
 <!-- ![Aaron Swartz](https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/x4_interClock.jpg) -->
 
 #### External Clock
