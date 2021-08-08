@@ -16,7 +16,7 @@ The standard FPGA design flow starts with design entry using schematics or a har
 
 ### The Version of Design Tools
 
-We use the Intel FPGA Complete Design Suite v13.1 in our project. To fully install the Intel FPGA Complete Design Suite v13.1, we require approximately 31GB of available disk space on the drive or partition where we are installing the software. For more details about Quartus II software and device, please refer to the following links:
+We use the Intel FPGA Complete Design Suite v13.1 in our project. To fully install the Intel FPGA Complete Design Suite v13.1, 31GB of available disk space on the drive or partition is required to install the hardware. For more details about Quartus II software and device, please refer to the following links:
 
 -  [Quartus II Handbook](https://www.altera.com/content/dam/altera-www/global/en_US/pdfs/literature/hb/qts/archives/quartusii_handbook_archive_131.pdf)
 -  [Intel FPGA Software Installation and Licensing Manual](https://www.altera.com/content/altera-www/global/en_us/index/documentation/esc1425946071433.html)
