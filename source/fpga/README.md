@@ -33,13 +33,13 @@ We use the Intel FPGA Complete Design Suite v13.1 in our project. To fully insta
 
 ## Development Tools
 
-Intel FPGA download cable: [USB-Blaster](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/ug/ug_usb_blstr.pdf) shown as following figure. 
+Intel FPGA download cable: [USB-Blaster](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/ug/ug_usb_blstr.pdf) is shown in the following figure. 
 
 <p align="center">
    <img src="https://raw.githubusercontent.com/DeepWiSe888/Octopus/main/image/usb_blaster.jpg" alt="[YOUR_ALT]"/>
 </p>
 
-The Intel FPGA download cable interfaces a USB port on a host computer to an FPGA mounted on a printed circuit board. The cable sends configuration data from the host computer to a standard 10-pin header connected to the FPGA. You can use the Intel FPGA download cable to iteratively download configuration data to a system during prototyping or to program data into the system during production. More information about how to use such download cable, please refer to [Intel download cables](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/download-cables.html).
+The Intel FPGA download cable interfaces a USB port on a host computer to an FPGA mounted on a printed circuit board. The cable sends configuration data from the host computer to a standard 10-pin header connected to the FPGA. You can use the Intel FPGA download cable to iteratively download configuration data to a system during prototyping or to program data into the system during production. For more information about how to use such download cable, please refer to [Intel download cables](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/download-cables.html).
 
 ## Build the FPGA project:
 
