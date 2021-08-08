@@ -41,9 +41,9 @@ Intel FPGA download cable: [USB-Blaster](https://www.intel.com/content/dam/www/p
 
 The Intel FPGA download cable interfaces a USB port on a host computer to an FPGA mounted on a printed circuit board. The cable sends configuration data from the host computer to a standard 10-pin header connected to the FPGA. You can use the Intel FPGA download cable to iteratively download configuration data to a system during prototyping or to program data into the system during production. More information about how to use such download cable, please refer to [Intel download cables](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/download-cables.html).
 
-## Build FPGA:
+## Build the FPGA project:
 
-1. Open the Quartus II software, and select *FIle > New Project Wizard*.
+1. Open the Quartus II software, and select *File > New Project Wizard*.
 2. Click *Next*, and enter the following information: *working directory of this project*, *name of this project* and *top-level design entity of this project*.
 3. Click *Finish*. When prompted to create the directory, choose *Yes*. 
 4. Select *Empty Project,* and then click *Next*.   
