@@ -14,7 +14,7 @@ The standard FPGA design flow starts with design entry using schematics or a har
 
 ## Software Requirements
 
-### More on Design Tools
+### FPGA Design Software Suite
 
 We use the Intel FPGA Complete Design Suite v13.1 in our project. To fully install the Intel FPGA Complete Design Suite v13.1, 31GB of available disk space on the drive or partition is required to install the hardware. For more details about Quartus II software and device, please refer to the following links:
 
@@ -41,7 +41,7 @@ Intel FPGA download cable: [USB-Blaster](https://www.intel.com/content/dam/www/p
 
 The Intel FPGA download cable interfaces a USB port on a host computer to an FPGA mounted on a printed circuit board. The cable sends configuration data from the host computer to a standard 10-pin header connected to the FPGA. You can use the Intel FPGA download cable to iteratively download configuration data to a system during prototyping or to program data into the system during production. For more information about how to use such download cable, please refer to [Intel download cables](https://www.intel.com/content/www/us/en/programmable/products/boards_and_kits/download-cables.html).
 
-## Build the FPGA project:
+## Build the FPGA Project:
 
 1. Open the Quartus II software, and select *File > New Project Wizard*.
 2. Click *Next*, and enter the following information: *working directory of this project*, *name of this project* and *top-level design entity of this project*.
