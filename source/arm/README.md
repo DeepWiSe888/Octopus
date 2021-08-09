@@ -44,7 +44,7 @@ The [ST-LINK/V2](https://www.st.com/en/development-tools/st-link-v2.html) is an 
 4. Build the project.
 5. Debug the project.
 
-We also give a general building steps here:
+We also give general building steps here:
 
 1. Create New Project using STM32CubeMX
 2. Pinout Configuration
