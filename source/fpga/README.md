@@ -31,7 +31,7 @@ We use the Intel FPGA Complete Design Suite v13.1 in our project. To fully insta
 
 
 
-## Development Tools
+## Programing Tools
 
 Intel FPGA download cable: [USB-Blaster](https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/ug/ug_usb_blstr.pdf) is shown in the following figure. 
 
