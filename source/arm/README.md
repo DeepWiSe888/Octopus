@@ -7,9 +7,9 @@ Task memory pool can be dynamic memory allocated by OS (mostly we use FreeRTOS),
 Remember destroying task flow at the end of task flow works. For more information, please refer to DAG_INTRODUCE.md. 
 
 # Lib
-Basic algothrms and algorithm tasks.
+Basic algothrithms and algorithm tasks.
 Embedded Eigen is using for matrix calculations.
-YOU SHOULD modify fpga_define.h as your hardware env, if using fpga.
+YOU SHOULD modify fpga_define.h according to your hardware env, if you are using FPGA.
 
 # STM32F7
 User-Code for STM32F7 * FreeRTOS sys. 
