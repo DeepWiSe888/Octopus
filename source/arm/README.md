@@ -14,7 +14,7 @@ YOU SHOULD modify fpga_define.h according to your hardware environment, if you a
 # STM32F7
 User-Code for STM32F7 * FreeRTOS system. 
 
-[STM32F767IG](https://www.st.com/en/microcontrollers-microprocessors/stm32f767ig.html) is selected in our system. It is a high-performance ARM Cortex-M7 32-bit RISC core operating at up to 216 MHz frequency with a floating point unit (FPU).  It also implements a full set of DSP instructions and a memory protection unit (MPU) which enhances the application security.  
+[STM32F767IG](https://www.st.com/en/microcontrollers-microprocessors/stm32f767ig.html) is selected in our system. It is a high-performance ARM Cortex-M7 32-bit RISC processor operating at up to 216 MHz frequency with a floating point unit (FPU).  It also implements a full set of DSP instructions and a memory protection unit (MPU) which enhances the application security.  
 
 ## Programing Tools
 
