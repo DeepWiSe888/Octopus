@@ -9,7 +9,7 @@ Remember to destroy task flow at the end of task flow works. For more informatio
 # Lib
 Basic algothrithms and algorithm tasks.
 Embedded Eigen is using for matrix calculations.
-YOU SHOULD modify fpga_define.h according to your hardware env, if you are using FPGA.
+YOU SHOULD modify fpga_define.h according to your hardware environment, if you are using FPGA.
 
 # STM32F7
 User-Code for STM32F7 * FreeRTOS sys. 
