@@ -18,7 +18,7 @@ User-Code for STM32F7 * FreeRTOS system.
 
 ## Programing Tools
 
-The [ST-LINK/V2](https://www.st.com/en/development-tools/st-link-v2.html) is an in-circuit debugger and programmer for the STM8 and STM32 microcontrollers. The single-wire interface module (SWIM) and JTAG/serial wire debugging (SWD) interfaces are used to communicate with any STM8 or STM32 microcontroller located on an application board. In addition to providing the same functionalities as the ST-LINK/V2, the ST-LINK/V2-ISOL features digital isolation between the PC and the target application board.
+The [ST-LINK/V2](https://www.st.com/en/development-tools/st-link-v2.html) is an in-circuit debugger and programmer for the STM8 and STM32 microcontrollers. The single-wire interface module (SWIM) and JTAG/serial wire debugging (SWD) interfaces are used to communicate with any STM8 or STM32 microcontroller located on an application board. In addition to providing the same functionalities as the ST-LINK/V2, the ST-LINK/V2-ISOL also features digital isolation between the PC and the target application board.
 
 ## Software Requirements
 
