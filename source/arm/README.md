@@ -1,5 +1,5 @@
 # Embedded OS Source Codes for Octopus
-This folder includes DAG scheduler system, basic linear algorithms, radar Hal driver, and user-code example for STM32F7 series.
+This folder includes DAG scheduler system, basic linear algorithms, radar Hal driver, and user-code examples for STM32F7 series.
 
 # DAG Scheduler
 DAG task flow system kernel. You can find task examples at lib/blas_tasks.* .
