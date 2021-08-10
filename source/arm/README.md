@@ -3,7 +3,7 @@ This folder includes DAG scheduler system, basic linear algorithms, radar Hal dr
 
 # DAG Scheduler
 DAG task flow system kernel. You can find task examples at lib/blas_tasks.* .
-Task memory pool can be dynamic memory allocated by OS (mostly we use FreeRTOS), or PHY SRAM address.
+Task memory pool can be dynamic memory allocated by OS (we mainly use FreeRTOS), or PHY SRAM address.
 Remember to destroy task flow at the end of task flow works. For more information, please refer to DAG_INTRODUCE.md. 
 
 # Lib
