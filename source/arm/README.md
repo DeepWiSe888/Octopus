@@ -40,7 +40,7 @@ The [ST-LINK/V2](https://www.st.com/en/development-tools/st-link-v2.html) is an 
 
 In the design workflow of Octopus, the ARM embedded system serves as the logic control of the main program process. In most cases, the ARM processor also assumes part of computation tasks, such as regression, modal decomposition, or large parameter size neural network predictions.
 
-The ARM system requires the correct configuration of clock, I/O interface and interrupt logic (especially ARM is actually sync with FPGA module through GPIO interrupt),  FMC and memory access. We provide a configured .ioc file that can be opened and generated STM32CubeIDE/Keil project codes. However, due to the difference in development environment, you still need to modify some code to integrate it to your project.
+The ARM system requires the correct configuration of clock, I/O interface and interrupt logic (especially ARM is actually sync with FPGA module through GPIO interrupt),  FMC and memory access. We provide a configured .ioc file that can be opened by STM32CubeIDE. However, due to the difference in development environment, you still need to modify some code to integrate it to your project.
 
 
 
@@ -64,21 +64,6 @@ We also give general building steps here:
 6. Edit main.c to toggle the LED
 7. Build the project
 8. Debug the project
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## 
