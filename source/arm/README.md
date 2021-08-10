@@ -48,22 +48,22 @@ The ARM system requires the correct configuration of clock, I/O interface and in
 2. Click *File>New>STM32 Project from an Existing STM32CubeMx Configuration*, and find bbb.ioc in this project. As now, you can see the clock and I / O interface and the Software Packs configurations, remember to modify the configurations such as USART number and I/O interrupt pins are in use, or connect hardware according to our configuration. We use the PH2 pulling up as a synchronization signal from FPGA, and USART2 for printing output .
 3. Add arm/lib directory to project, which contains the DAG system code, and implementations of  matrix structures and the basic linear algebra subsystem.
 4. Add the vital_sign or occupancy example directory to project.
-5. Refer to the / * user code * / blocks in arm/stm32f7/Core/Src/main.c and stm32f7xx_it.c ,  modify your corresponding c file, mainly USART and GPIO interrupts and semaphore logics. We donnot recommend you to copy files directly overlay because there may be differences in source code distributions according to different versions of IDE.
+5. Refer to the / * user code * / blocks in arm/stm32f7/Core/Src/main.c and stm32f7xx_it.c,  modify your corresponding c file, mainly USART and GPIO interrupts and semaphore logics. We do not recommend you to copy files directly because there may be differences in source code distributions according to different versions of IDE.
 6. Build and run the project.
-7. If your host PC is connected to the USART interface through the USB TTL connector, you can check the  program outputs in UART tool.
+7. If your host PC is connected to the USART interface through the USB TTL connector, you can check the program outputs in UART tool.
 
 
 
 We also give general building steps here:
 
-1. Create New Project using STM32CubeMX
-2. Pinout Configuration
-3. Clock Configuration
-4. GPIO Configuration
+1. Create new project using STM32CubeMX
+2. Pinout configuration
+3. Clock configuration
+4. GPIO configuration
 5. Configure project and generate source Code
-6. Edit main.c to Toggle the LED
-7. Build the Project
-8. Debug the Project
+6. Edit main.c to toggle the LED
+7. Build the project
+8. Debug the project
 
 
 
