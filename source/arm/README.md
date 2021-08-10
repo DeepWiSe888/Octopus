@@ -28,7 +28,7 @@ The [ST-LINK/V2](https://www.st.com/en/development-tools/st-link-v2.html) is an 
 
 [STM32CubeIDE]( https://www.st.com/en/development-tools/stm32cubeide.html) is an all-in-one multi-OS development tool, which is part of the STM32Cube software ecosystem. STM32CubeIde Board PhotoSTM32CubeIDE is an advanced C/C++ development platform with peripheral configuration, code generation, code compilation, and debug features for STM32 microcontrollers and microprocessors. More feautures please refer to [STM32CubeIDE Websites]( https://www.st.com/en/development-tools/stm32cubeide.html).
 
-[STM32CubeMX](https://www.freertos.org/FreeRTOS-Plus/BSP_Solutions/ST/STM32CubeMX.html) is a free graphical configuration and low level code generation tool for STM32 ARM Cortex-M microcontrollers. STM32CubeMX will facilitate MCU selection, suggest pin assignments, check pin assignments for consistency, create start up code, generate configuration files for middleware, and generate IDE ready projects that include STM32Cube drivers and middlware. 
+[STM32CubeMX](https://www.freertos.org/FreeRTOS-Plus/BSP_Solutions/ST/STM32CubeMX.html) is a free graphical configuration and low-level code generation tool for STM32 ARM Cortex-M microcontrollers. STM32CubeMX facilitates MCU selection, suggests pin assignments, checks pin assignments for consistency, creates start-up code, generates configuration files for middleware, and generates IDE-ready projects that include STM32Cube drivers and middlware. 
 
 ### Operating Systems
 
