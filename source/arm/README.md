@@ -30,13 +30,13 @@ The [ST-LINK/V2](https://www.st.com/en/development-tools/st-link-v2.html) is an 
 
 [STM32CubeMX](https://www.freertos.org/FreeRTOS-Plus/BSP_Solutions/ST/STM32CubeMX.html) is a free graphical configuration and low level code generation tool for STM32 ARM Cortex-M microcontrollers. STM32CubeMX will facilitate MCU selection, suggest pin assignments, check pin assignments for consistency, create start up code, generate configuration files for middleware, and generate IDE ready projects that include STM32Cube drivers and middlware. 
 
-### Operating System
+### Operating Systems
 
 - Windows
 - Linux
 - Mac OS
 
-## Build ARM 
+## Build the ARM Project 
 
 In Octopus scheme, the ARM embedded system serves as the logic control of the main program process. In most cases, the ARM processor also assumes partial program calculations, such as regression, modal decomposition, or large parameter size neural network pridictions.
 
