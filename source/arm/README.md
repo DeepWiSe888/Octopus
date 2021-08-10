@@ -38,11 +38,21 @@ The [ST-LINK/V2](https://www.st.com/en/development-tools/st-link-v2.html) is an 
 
 ## Build ARM 
 
+In Octopus scheme, the ARM embedded system serves as the logic control of the main program process. In most cases, the ARM processor also assumes partial program calculations, such as regression, modal decomposition, or large parameter size neural network pridictions.
+
+The ARM system requires the correct configuration of clock , I/O interface and interrupt logic (especially ARM is actually sync with FPGA module through GPIO interrupt),  FMC and memory access. We provide a configured .ioc file that can be opened and generated STM32CubeIDE/Keil project codes. However, due to the difference in development environment, you still need to conduct some code integration work.
+
+
+
 1. Open STM32CubeIDE 
-2. Click *File>New>STM32 Project from an Existing STM32CubeMx Configuration*, and find bbb.ioc in this project. 
-3. Edit main.c and add ./example.
-4. Build the project.
-5. Debug the project.
+2. Click *File>New>STM32 Project from an Existing STM32CubeMx Configuration*, and find bbb.ioc in this project. As now, you can see the clock and I / O interface and the Software Packs configurations, remember to modify the configurations such as USART number and I/O interrupt pins are in use, or connect hardware according to our configuration. We use the PH2 pulling up as a synchronization signal from FPGA, and USART2 for printing output .
+3. Add arm/lib directory to project, which contains the DAG system code, and implementations of  matrix structures and the basic linear algebra subsystem.
+4. Add the vital_sign or occupancy example directory to project.
+5. Refer to the / * user code * / blocks in arm/stm32f7/Core/Src/main.c and stm32f7xx_it.c ,  modify your corresponding c file, mainly USART and GPIO interrupts and semaphore logics. We donnot recommend you to copy files directly overlay because there may be differences in source code distributions according to different versions of IDE.
+6. Build and run the project.
+7. If your host PC is connected to the USART interface through the USB TTL connector, you can check the  program outputs in UART tool.
+
+
 
 We also give general building steps here:
 

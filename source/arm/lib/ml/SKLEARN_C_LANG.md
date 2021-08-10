@@ -39,12 +39,12 @@ import joblib
 Now you use command line to generate c file:
 
 ```python
-#模型需要用joblib生成
+#use joblib to dump model file
 joblib.dump(clf, 'estimator.pkl', compress=0)
 
 porter estimator.pkl --c
 
-#输出文件名
+#generate c file
 porter estimator.pkl --c --pipe > estimator.c
 ```
 
