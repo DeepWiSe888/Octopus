@@ -2,7 +2,7 @@
 This folder includes DAG scheduler system, basic linear algorithms, radar Hal driver, and user-code examples for STM32F7 series.
 
 # DAG Scheduler
-DAG task flow system kernel. You can find task examples at lib/blas_tasks.* .
+DAG scheduler system is used for parallelization and scheduling of different tasks. You can find task examples at lib/blas_tasks.* .
 Task memory pool can be dynamic memory allocated by OS (we mainly use FreeRTOS), or PHY SRAM address.
 Remember to destroy task flow at the end of task flow works. For more information, please refer to DAG_INTRODUCE.md. 
 
