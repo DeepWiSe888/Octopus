@@ -27,6 +27,18 @@ This repository includes some folders.
 [source/fpga](https://github.com/DeepWiSe888/Octopus/tree/main/source/fpga): this subfolder contains DSP and CNN for FPGA signal processing. More details of FPGA code can be found in it.<br>
 [source/example](https://github.com/DeepWiSe888/Octopus/tree/main/source/example): this subfolder contains two sensing examples of vital sign estimation and occupancy awareness.<br>
 
+# Reference Our Project
+Any use of the Software which results in an academic publication or other publication which includes a bibliography must include citations to the Octopus project.  The project should be cited as follows:
+
+```
+@inproceedings{chen2021octopus,
+  title={{Octopus: A Practical and Versatile Wideband MIMO Sensing Platform}},
+  author={Chen, Zhe and Zheng, Tianyue and Luo, Jun},
+  booktitle={Proc. of the 27th ACM MobiCom},
+  pages={1--14},
+  year={2021}
+}
+```
 
 # Credits
 This application uses open-source components. You can find the source code of their open source projects along with license information below. We acknowledge and are grateful to these developers for their contributions to open source.
