@@ -44,7 +44,7 @@ And the bibtex of our paper is:
 }
 ```
 
-# Our Other Works ...
+# Our Other Works Related to Octopus
 
 More than the platform itself, we are excited to announce our related works using Octopus to advance the state of the art. We are proud to list the following published papers from our group using Octopus.
 
