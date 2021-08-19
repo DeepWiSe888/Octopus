@@ -48,7 +48,7 @@ And the bibtex of our paper is:
 
 More than the platform itself, we are excited to announce our related works using Octopus to advance the state of the art. We are proud to list the following published papers from our group using Octopus.
 
-In the survey article below, we give the theoretical framework of RF sensing. The demo application is developed using Octopus:
+In the <a href="https://www.researchgate.net/publication/345004837_Enhancing_RF_Sensing_with_Deep_Learning_A_Layered_Approach">survey article</a> below, we give the theoretical framework of RF sensing. The demo application is developed using Octopus:
 
 [2] Tianyue Zheng, Zhe Chen, Shuya Ding, and Jun Luo, Enhancing RF Sensing with Deep Learning: A Layered Approach. IEEE CommunicationsMagazine, vol. 59, no. 3, pp. 70–76, 2021.
 
@@ -64,7 +64,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 }
 ```
 <br />
-<strong>V<sup>2</sup>iFi</strong> is an application example of Octopus. It uses the platform for in-vehicle vital sign monitoring. The paper can be cited as follows:
+<a href="https://www.researchgate.net/publication/342189123_V2iFi_in-Vehicle_Vital_Sign_Monitoring_via_Compact_RF_Sensing">V<sup>2</sup>iFi</a> is an application example of Octopus. It uses the platform for in-vehicle vital sign monitoring. The paper can be cited as follows:
 
 [3] Tianyue Zheng, Zhe Chen, Chao Cai, Jun Luo, and Xu Zhang. 2020. V2iFi: inVehicle Vital Sign Monitoring via Compact RF Sensing. In Proc. of the 22nd ACM UbiComp. 70:1–27.
 
@@ -78,7 +78,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 }
 ```
 <br />
-<strong>RF-Net</strong> is another use examples of Octopus's AI module. It uses the platform for one-shot human activity recognition. The paper can be cited as follows:
+<a href="https://www.researchgate.net/publication/345004826_RF-Net_A_Unified_Meta-Learning_Framework_for_RF-enabled_One-Shot_Human_Activity_Recognition">RF-Net</a> is another use examples of Octopus's AI module. It uses the platform for one-shot human activity recognition. The paper can be cited as follows:
 
 [4] Shuya Ding, Zhe Chen, Tianyue Zheng, and Jun Luo. 2020. RF-Net: A Unified Meta-Learning Framework for RF-Enabled One-Shot Human Activity Recognition. In Proc. of the 18th ACM SenSys. 517–530.
 
@@ -107,7 +107,8 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 }
 ```
 <br />
-<strong>SiWa</strong> employs Octopus's AI module to perform imaging and see into the wall. It also shows how the Octopus's hardware is flexible and can be reconstructed in another form.
+<a href="https://www.researchgate.net/publication/353914412_SiWa_See_into_Walls_via_Deep_UWB_Radar">SiWa</a> employs Octopus's AI module to perform imaging and see into the wall. It also shows how the Octopus's hardware is flexible and can be reconstructed in another form.
+
 
 [6] Tianyue Zheng, Zhe Chen, Jun Luo, Lin Ke, Chaoyang Zhao, and Yaowen Yang.2021. SiWa: See into Walls via Deep UWB Radar. In Proc. of the 27th ACM MobiCom. 1–14.
 
