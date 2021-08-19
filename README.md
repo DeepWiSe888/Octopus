@@ -48,8 +48,7 @@ And the bibtex of our paper is:
 
 More than the platform itself, we are excited to announce our related works using Octopus to advance the state of the art. We are proud to list the following published papers from our group using Octopus.
 
-In the <a href="https://www.researchgate.net/publication/345004837_Enhancing_RF_Sensing_with_Deep_Learning_A_Layered_Approach">survey article</a> below, we give the theoretical framework of RF sensing. The demo application is developed using Octopus:
-
+In the <a href="https://www.researchgate.net/publication/345004837_Enhancing_RF_Sensing_with_Deep_Learning_A_Layered_Approach">survey article</a> below, we give the theoretical framework of RF sensing. The demo application is developed using Octopus:<br>
 [2] Tianyue Zheng, Zhe Chen, Shuya Ding, and Jun Luo, Enhancing RF Sensing with Deep Learning: A Layered Approach. IEEE CommunicationsMagazine, vol. 59, no. 3, pp. 70–76, 2021.
 
 ```
