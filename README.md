@@ -107,7 +107,7 @@ MoVi-Fi is another embodiment of artificial intelligence achieved by Octopus. It
 }
 ```
 <br />
-SiWa is another example of using Octopus's AI module to perform imaging and see into the wall. It also shows how the Octopus's hardware is flexible and can be reconstructed in another form.
+SiWa employs Octopus's AI module to perform imaging and see into the wall. It also shows how the Octopus's hardware is flexible and can be reconstructed in another form.
 
 [6] Tianyue Zheng, Zhe Chen, Jun Luo, Lin Ke, Chaoyang Zhao, and Yaowen Yang.2021. SiWa: See into Walls via Deep UWB Radar. In Proc. of the 27th ACM MobiCom. 1–14.
 
