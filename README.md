@@ -28,7 +28,7 @@ This repository includes some folders.
 [source/example](https://github.com/DeepWiSe888/Octopus/tree/main/source/example): this subfolder contains two sensing examples of vital sign estimation and occupancy awareness.<br>
 
 # Reference Our Project
-Any use of the Software which results in an academic publication or other publication which includes a bibliography must include citations to the [Octopus](https://www.researchgate.net/publication/353914407_Octopus_A_Practical_and_Versatile_Wideband_MIMO_Sensing_Platform)project.  The project should be cited as follows:
+Any use of the Software which results in an academic publication or other publication which includes a bibliography must include citations to the [Octopus](https://www.researchgate.net/publication/353914407_Octopus_A_Practical_and_Versatile_Wideband_MIMO_Sensing_Platform) project.  The project should be cited as follows:
 
 [1] Zhe Chen, Tianyue Zheng, and Jun Luo. 2021. Octopus: A Practical and Versatile Wideband MIMO Sensing Platform. In Proc. of the 27th ACM MobiCom. 1–14.
 
