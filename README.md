@@ -63,6 +63,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 	year={2021}
 }
 ```
+<br />
 V<sup>2</sup>iFi is an application example of Octopus. It uses the platform for in-vehicle vital sign monitoring. The paper can be cited as follows:
 
 [3] Tianyue Zheng, Zhe Chen, Chao Cai, Jun Luo, and Xu Zhang. 2020. V2iFi: inVehicle Vital Sign Monitoring via Compact RF Sensing. In Proc. of the 22nd ACM UbiComp. 70:1–27.
@@ -76,7 +77,7 @@ V<sup>2</sup>iFi is an application example of Octopus. It uses the platform for 
 	year = {2020}
 }
 ```
-
+<br />
 RF-Net is another use examples of Octopus's AI module. It uses the platform for one-shot human activity recognition. The paper can be cited as follows:
 
 [4] Shuya Ding, Zhe Chen, Tianyue Zheng, and Jun Luo. 2020. RF-Net: A Unified Meta-Learning Framework for RF-Enabled One-Shot Human Activity Recognition. In Proc. of the 18th ACM SenSys. 517–530.
@@ -91,6 +92,7 @@ RF-Net is another use examples of Octopus's AI module. It uses the platform for 
 	numpages = {14},
 }
 ```
+<br />
 MoVi-Fi is another embodiment of artificial intelligence achieved by Octopus. It performs motion-robust vital sign waveform recovery using contrastive learning:
 
 [5] Zhe Chen, Tianyue Zheng, Chao Cai, and Jun Luo. 2021. MoVi-Fi: Motion-robust Vital Signs Waveform Recovery via Deep Interpreted RF Sensing. In Proc. of the 27th ACM MobiCom. 1–14.
@@ -104,6 +106,8 @@ MoVi-Fi is another embodiment of artificial intelligence achieved by Octopus. It
 	booktitle = {Proc. of the 27th ACM MobiCom}
 }
 ```
+<br />
+SiWa is another example of using Octopus's AI module to perform imaging and see into the wall. It also shows how the Octopus's hardware is flexible and can be reconstructed in another form.
 
 [6] Tianyue Zheng, Zhe Chen, Jun Luo, Lin Ke, Chaoyang Zhao, and Yaowen Yang.2021. SiWa: See into Walls via Deep UWB Radar. In Proc. of the 27th ACM MobiCom. 1–14.
 
