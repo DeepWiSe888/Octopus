@@ -49,6 +49,7 @@ And the bibtex of our paper is:
 More than the platform itself, we are excited to announce our related works using Octopus to advance the state of the art. We are proud to list the following published papers from our group using Octopus.
 
 In the <a href="https://www.researchgate.net/publication/345004837_Enhancing_RF_Sensing_with_Deep_Learning_A_Layered_Approach">survey article</a> below, we give the theoretical framework of RF sensing. The demo application is developed using Octopus:
+
 [2] Tianyue Zheng, Zhe Chen, Shuya Ding, and Jun Luo, Enhancing RF Sensing with Deep Learning: A Layered Approach. IEEE CommunicationsMagazine, vol. 59, no. 3, pp. 70–76, 2021.
 
 ```
@@ -62,7 +63,7 @@ In the <a href="https://www.researchgate.net/publication/345004837_Enhancing_RF_
 	year={2021}
 }
 ```
-<br />
+<br>
 <a href="https://www.researchgate.net/publication/342189123_V2iFi_in-Vehicle_Vital_Sign_Monitoring_via_Compact_RF_Sensing">V<sup>2</sup>iFi</a> is an application example of Octopus. It uses the platform for in-vehicle vital sign monitoring. The paper can be cited as follows:
 
 [3] Tianyue Zheng, Zhe Chen, Chao Cai, Jun Luo, and Xu Zhang. 2020. V2iFi: inVehicle Vital Sign Monitoring via Compact RF Sensing. In Proc. of the 22nd ACM UbiComp. 70:1–27.
