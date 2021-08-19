@@ -36,11 +36,11 @@ And the bibtex is:
 
 ```
 @inproceedings{chen2021octopus,
-  title={{Octopus: A Practical and Versatile Wideband MIMO Sensing Platform}},
-  author={Chen, Zhe and Zheng, Tianyue and Luo, Jun},
-  booktitle={Proc. of the 27th ACM MobiCom},
-  pages={1--14},
-  year={2021}
+	title={{Octopus: A Practical and Versatile Wideband MIMO Sensing Platform}},
+	author={Chen, Zhe and Zheng, Tianyue and Luo, Jun},
+	booktitle={Proc. of the 27th ACM MobiCom},
+	pages={1--14},
+	year={2021}
 }
 ```
 
