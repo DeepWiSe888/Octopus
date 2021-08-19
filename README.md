@@ -44,7 +44,7 @@ And the bibtex of our paper is:
 }
 ```
 
-# Applications of Octopus
+# Works Related to Octopus
 
 More than the platform itself, we are excited to announce our related works using Octopus to advance the state of the art. We are proud to list the following published papers from our group using Octopus.
 
@@ -125,7 +125,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 # Credits
 This application uses open-source components. You can find the source code of their open source projects along with license information below. We acknowledge and are grateful to these developers for their contributions to open source.
 
-[1]https://github.com/DodgeHo/VMD_cpp<br>
-[2]https://eigen.tuxfamily.org/<br>
-[3]https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA<br>[4]https://novelda.com/ <br>[5]https://taskflow.github.io/<br>
+[1] https://github.com/DodgeHo/VMD_cpp<br>
+[2] https://eigen.tuxfamily.org/<br>
+[3] https://github.com/ZFTurbo/Verilog-Generator-of-Neural-Net-Digit-Detector-for-FPGA<br>[4]https://novelda.com/ <br>[5]https://taskflow.github.io/<br>
 
