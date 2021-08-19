@@ -78,7 +78,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 }
 ```
 <br />
-**RF-Net** is another use examples of Octopus's AI module. It uses the platform for one-shot human activity recognition. The paper can be cited as follows:
+<strong>RF-Net</strong> is another use examples of Octopus's AI module. It uses the platform for one-shot human activity recognition. The paper can be cited as follows:
 
 [4] Shuya Ding, Zhe Chen, Tianyue Zheng, and Jun Luo. 2020. RF-Net: A Unified Meta-Learning Framework for RF-Enabled One-Shot Human Activity Recognition. In Proc. of the 18th ACM SenSys. 517–530.
 
@@ -93,7 +93,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 }
 ```
 <br />
-**MoVi-Fi** is another embodiment of artificial intelligence achieved by Octopus. It performs motion-robust vital sign waveform recovery using contrastive learning:
+<strong>MoVi-Fi</strong> is another embodiment of artificial intelligence achieved by Octopus. It performs motion-robust vital sign waveform recovery using contrastive learning:
 
 [5] Zhe Chen, Tianyue Zheng, Chao Cai, and Jun Luo. 2021. MoVi-Fi: Motion-robust Vital Signs Waveform Recovery via Deep Interpreted RF Sensing. In Proc. of the 27th ACM MobiCom. 1–14.
 
@@ -107,7 +107,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 }
 ```
 <br />
-**SiWa** employs Octopus's AI module to perform imaging and see into the wall. It also shows how the Octopus's hardware is flexible and can be reconstructed in another form.
+<strong>SiWa</strong> employs Octopus's AI module to perform imaging and see into the wall. It also shows how the Octopus's hardware is flexible and can be reconstructed in another form.
 
 [6] Tianyue Zheng, Zhe Chen, Jun Luo, Lin Ke, Chaoyang Zhao, and Yaowen Yang.2021. SiWa: See into Walls via Deep UWB Radar. In Proc. of the 27th ACM MobiCom. 1–14.
 
