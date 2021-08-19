@@ -32,7 +32,7 @@ Any use of the Software which results in an academic publication or other public
 
 [1] Zhe Chen, Tianyue Zheng, and Jun Luo. 2021. Octopus: A Practical and Versatile Wideband MIMO Sensing Platform. In Proc. of the 27th ACM MobiCom. 1–14.
 
-And the bibtex is:
+And the bibtex of our paper is:
 
 ```
 @inproceedings{chen2021octopus,
@@ -48,6 +48,10 @@ And the bibtex is:
 
 More than the platform itself, we are excited to announce our related works using Octopus to advance the state of the art. We are proud to list the following published papers from our group using Octopus.
 
+In the survey article below, we give the theoretical framework of RF sensing. The demo application is developed using Octopus:
+
+[2] Tianyue Zheng, Zhe Chen, Shuya Ding, and Jun Luo, Enhancing RF Sensing with Deep Learning: A Layered Approach. IEEE CommunicationsMagazine, vol. 59, no. 3, pp. 70–76, 2021.
+
 ```
 @article{zheng2021enhancing,
 	title={Enhancing RF Sensing with Deep Learning: A Layered Approach},
@@ -59,7 +63,9 @@ More than the platform itself, we are excited to announce our related works usin
 	year={2021}
 }
 ```
+V<sup>2</sup>iFi is an application example of Octopus. It uses the platform for in-vehicle vital sign monitoring.
 
+[3]
 
 ```
 @inproceedings{zheng2020v2ifi,
@@ -70,6 +76,8 @@ More than the platform itself, we are excited to announce our related works usin
 	year = {2020}
 }
 ```
+
+[4]
 
 ```
 @inproceedings{ding2020rfnet,
@@ -82,6 +90,8 @@ More than the platform itself, we are excited to announce our related works usin
 }
 ```
 
+[5]
+
 ```
 @inproceedings{chen2021movifi,
 	author={Zhe Chen and Tianyue Zheng and Chao Cai and Jun Luo},
@@ -92,6 +102,7 @@ More than the platform itself, we are excited to announce our related works usin
 }
 ```
 
+[6]
 
 ```
 @inproceedings{zheng2021siwa,
