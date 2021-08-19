@@ -83,7 +83,7 @@ More than the platform itself, we are excited to announce our related works usin
 ```
 
 ```
-@inproceedings{movifi,
+@inproceedings{chen2021movifi,
 	author={Zhe Chen and Tianyue Zheng and Chao Cai and Jun Luo},
 	title = {{MoVi-Fi: Motion-robust Vital Signs Waveform Recovery via Deep Interpreted RF Sensing}},
 	year = {2021},
