@@ -93,9 +93,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 }
 ```
 <br>
-[hardware](https://github.com/DeepWiSe888/Octopus/tree/main/hardware): this folder contains the schematics of antenna array design. To be used together with source.<br>
-[MoVi-Fi](https://www.researchgate.net/publication/353914489_MoVi-Fi_Motion-robust_Vital_Signs_Waveform_Recovery_via_Deep_Interpreted_RF_Sensing)
- is another embodiment of artificial intelligence achieved by Octopus. It performs motion-robust vital sign waveform recovery using contrastive learning:
+<a href="https://www.researchgate.net/publication/353914489_MoVi-Fi_Motion-robust_Vital_Signs_Waveform_Recovery_via_Deep_Interpreted_RF_Sensing">MoVi-Fi</a> is another embodiment of artificial intelligence achieved by Octopus. It performs motion-robust vital sign waveform recovery using contrastive learning:
 
 [5] Zhe Chen, Tianyue Zheng, Chao Cai, and Jun Luo. 2021. MoVi-Fi: Motion-robust Vital Signs Waveform Recovery via Deep Interpreted RF Sensing. In Proc. of the 27th ACM MobiCom. 1–14.
 
