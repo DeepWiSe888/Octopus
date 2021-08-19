@@ -92,7 +92,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 	numpages = {14},
 }
 ```
-<br />
+<br>
 [MoVi-Fi](https://www.researchgate.net/publication/353914489_MoVi-Fi_Motion-robust_Vital_Signs_Waveform_Recovery_via_Deep_Interpreted_RF_Sensing)
  is another embodiment of artificial intelligence achieved by Octopus. It performs motion-robust vital sign waveform recovery using contrastive learning:
 
