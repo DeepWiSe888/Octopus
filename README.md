@@ -27,6 +27,7 @@ This repository includes some folders.
 [source/fpga](https://github.com/DeepWiSe888/Octopus/tree/main/source/fpga): this subfolder contains DSP and CNN for FPGA signal processing. More details of FPGA code can be found in it.<br>
 [source/example](https://github.com/DeepWiSe888/Octopus/tree/main/source/example): this subfolder contains two sensing examples of vital sign estimation and occupancy awareness.<br>
 
+
 # Reference Our Project
 Any use of the Software which results in an academic publication or other publication which includes a bibliography must include citations to the [Octopus](https://www.researchgate.net/publication/353914407_Octopus_A_Practical_and_Versatile_Wideband_MIMO_Sensing_Platform) project.  The project should be cited as follows:
 
@@ -120,6 +121,8 @@ In the <a href="https://www.researchgate.net/publication/345004837_Enhancing_RF_
 	booktitle = {Proc. of the 27th ACM MobiCom}
 }  
 ```
+# Hardware Evaluation Board Coming Soon!
+We will sell hardware evaluation boards in the recent future. 
 
 
 # Credits
