@@ -30,6 +30,10 @@ This repository includes some folders.
 # Reference Our Project
 Any use of the Software which results in an academic publication or other publication which includes a bibliography must include citations to the Octopus project.  The project should be cited as follows:
 
+[1] Zhe Chen, Tianyue Zheng, and Jun Luo. 2021. Octopus: A Practical and Versatile Wideband MIMO Sensing Platform. In Proc. of the 27th ACM MobiCom. 1–14.
+
+And the bibtex is:
+
 ```
 @inproceedings{chen2021octopus,
   title={{Octopus: A Practical and Versatile Wideband MIMO Sensing Platform}},
