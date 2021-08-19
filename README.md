@@ -50,41 +50,41 @@ More than the platform itself, we are excited to announce our related works usin
 
 ```
 @article{zheng2021enhancing,
-  title={Enhancing RF Sensing with Deep Learning: A Layered Approach},
-  author={Zheng, Tianyue and Chen, Zhe and Ding, Shuya and Luo, Jun},
-  journal={IEEE Communications Magazine},
-  volume={59},
-  number={2},
-  pages={70--76},
-  year={2021}
+	title={Enhancing RF Sensing with Deep Learning: A Layered Approach},
+	author={Zheng, Tianyue and Chen, Zhe and Ding, Shuya and Luo, Jun},
+	journal={IEEE Communications Magazine},
+	volume={59},
+	number={2},
+	pages={70--76},
+	year={2021}
 }
 ```
 
 
 ```
 @inproceedings{zheng2020v2ifi,
-  title={V$^2$iFi: in-Vehicle Vital Sign Monitoring via Compact RF Sensing},
-  author={Zheng, Tianyue and Chen, Zhe and Cai, Chao and Luo, Jun and Zhang, Xu},
-  booktitle={Proc. of the 22nd ACM UbiComp},
-  pages={70:1--27},
-  year = {2020}
+	title={V$^2$iFi: in-Vehicle Vital Sign Monitoring via Compact RF Sensing},
+	author={Zheng, Tianyue and Chen, Zhe and Cai, Chao and Luo, Jun and Zhang, Xu},
+	booktitle={Proc. of the 22nd ACM UbiComp},
+	pages={70:1--27},
+	year = {2020}
 }
 ```
 
 ```
 @inproceedings{ding2020rfnet,
-author = {Ding, Shuya and Chen, Zhe and Zheng, Tianyue and Luo, Jun},
-title = {RF-Net: A Unified Meta-Learning Framework for RF-Enabled One-Shot Human Activity Recognition},
-year = {2020},
-booktitle = {Proc. of the 18th ACM SenSys},
-pages = {517–530},
-numpages = {14},
+	author = {Ding, Shuya and Chen, Zhe and Zheng, Tianyue and Luo, Jun},
+	title = {RF-Net: A Unified Meta-Learning Framework for RF-Enabled One-Shot Human Activity Recognition},
+	year = {2020},
+	booktitle = {Proc. of the 18th ACM SenSys},
+	pages = {517–530},
+	numpages = {14},
 }
 ```
 
 ```
 @inproceedings{movifi,
-    author={Zhe Chen and Tianyue Zheng and Chao Cai and Jun Luo},
+	author={Zhe Chen and Tianyue Zheng and Chao Cai and Jun Luo},
 	title = {{MoVi-Fi: Motion-robust Vital Signs Waveform Recovery via Deep Interpreted RF Sensing}},
 	year = {2021},
 	pages={1--14},
@@ -95,7 +95,7 @@ numpages = {14},
 
 ```
 @inproceedings{zheng2021siwa,
-    author={Tianyue Zheng and Zhe Chen and Jun Luo and Lin Ke and Chaoyang Zhao and Yaowen Yang},
+	author={Tianyue Zheng and Zhe Chen and Jun Luo and Lin Ke and Chaoyang Zhao and Yaowen Yang},
 	title = {{SiWa: See into Walls via Deep UWB Radar}},
 	year = {2021},
 	pages={1--14},
