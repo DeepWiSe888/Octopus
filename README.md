@@ -64,7 +64,7 @@ In the survey article below, we give the theoretical framework of RF sensing. Th
 }
 ```
 <br />
-**V<sup>2</sup>iFi** is an application example of Octopus. It uses the platform for in-vehicle vital sign monitoring. The paper can be cited as follows:
+<strong>V<sup>2</sup>iFi</strong> is an application example of Octopus. It uses the platform for in-vehicle vital sign monitoring. The paper can be cited as follows:
 
 [3] Tianyue Zheng, Zhe Chen, Chao Cai, Jun Luo, and Xu Zhang. 2020. V2iFi: inVehicle Vital Sign Monitoring via Compact RF Sensing. In Proc. of the 22nd ACM UbiComp. 70:1–27.
 
