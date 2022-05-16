@@ -1,0 +1,254 @@
+Analysis & Synthesis report for X4_mimo_top
+Thu Feb 24 14:36:43 2022
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-----------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Thu Feb 24 14:36:43 2022               ;
+; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Revision Name               ; X4_mimo_top                                     ;
+; Top-level Entity Name       ; x4_mimo_top                                     ;
+; Family                      ; Cyclone V                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
+; Total registers             ; N/A until Partition Merge                       ;
+; Total pins                  ; N/A until Partition Merge                       ;
+; Total virtual pins          ; N/A until Partition Merge                       ;
+; Total block memory bits     ; N/A until Partition Merge                       ;
+; Total PLLs                  ; N/A until Partition Merge                       ;
+; Total DLLs                  ; N/A until Partition Merge                       ;
++-----------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; x4_mimo_top        ; X4_mimo_top        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+    Info: Processing started: Thu Feb 24 14:36:18 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off X4_mimo_top -c X4_mimo_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12248): Elaborating Platform Designer system entity "global_clk.qsys"
+Info (12250): 2022.02.24.14:36:36 Progress: Loading ip_core/global_clk.qsys
+Info (12250): 2022.02.24.14:36:37 Progress: Reading input file
+Info (12250): 2022.02.24.14:36:37 Progress: Adding altclkctrl_0 [altclkctrl 17.1]
+Info (12250): 2022.02.24.14:36:37 Progress: Parameterizing module altclkctrl_0
+Info (12250): 2022.02.24.14:36:37 Progress: Building connections
+Info (12250): 2022.02.24.14:36:37 Progress: Parameterizing connections
+Info (12250): 2022.02.24.14:36:37 Progress: Validating
+Info (12250): 2022.02.24.14:36:38 Progress: Done reading input file
+Info (12250): 2022.02.24.14:36:39 : global_clk.altclkctrl_0: Targeting device family: Cyclone V.
+Info (12250): 2022.02.24.14:36:39 : global_clk.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info (12250): 2022.02.24.14:36:39 : global_clk.altclkctrl_0: The register mode of port 'ena' is unavailable while 'ena' port not added. 
+Info (12250): Global_clk: Generating global_clk "global_clk" for QUARTUS_SYNTH
+Info (12250): Altclkctrl_0: Generating top-level entity global_clk_altclkctrl_0.
+Info (12250): Altclkctrl_0: "global_clk" instantiated altclkctrl "altclkctrl_0"
+Info (12250): Global_clk: Done "global_clk" with 2 modules, 2 files
+Info (12249): Finished elaborating Platform Designer system entity "global_clk.qsys"
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/data_process/frame_data_fifo.v
+    Info (12023): Found entity 1: frame_data_fifo File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/data_process/frame_data_fifo.v Line: 39
+Warning (10090): Verilog HDL syntax warning at data_process.v(402): extra block comment delimiter characters /* within block comment File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/data_process/data_process.v Line: 402
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/data_process/data_process.v
+    Info (12023): Found entity 1: data_process File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/data_process/data_process.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/debounce/udp_debounce.v
+    Info (12023): Found entity 1: udp_debounce File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/debounce/udp_debounce.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/debounce/arp_debounce.v
+    Info (12023): Found entity 1: arp_debounce File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/debounce/arp_debounce.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ethernet/generate_data.v
+    Info (12023): Found entity 1: generate_data File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/generate_data.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ethernet/eth_udp_send.v
+    Info (12023): Found entity 1: eth_udp_send File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_udp_send.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ethernet/eth_top.v
+    Info (12023): Found entity 1: eth_top File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ethernet/eth_receive.v
+    Info (12023): Found entity 1: eth_receive File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_receive.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ethernet/eth_mac_send.v
+    Info (12023): Found entity 1: eth_mac_send File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_mac_send.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ethernet/eth_data_wr2ram.v
+    Info (12023): Found entity 1: eth_data_wr2ram File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_data_wr2ram.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ethernet/eth_arp_send.v
+    Info (12023): Found entity 1: eth_arp_send File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_arp_send.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ethernet/crc.v
+    Info (12023): Found entity 1: crc File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/crc.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ethernet/auto_read_write.v
+    Info (12023): Found entity 1: auto_read_write File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/auto_read_write.v Line: 9
+Error (10170): Verilog HDL syntax error at wfifo_8x2k_inst.v(1) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/wfifo_8x2k_inst.v Line: 1
+Error (10839): Verilog HDL error at wfifo_8x2k_inst.v(1): declaring global objects is a SystemVerilog feature File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/wfifo_8x2k_inst.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ip_core/wfifo_8x2k_inst.v
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/ip_core/wfifo_8x2k.v
+    Info (12023): Found entity 1: wfifo_8x2k File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/wfifo_8x2k.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/spi_driver/spi_module.v
+    Info (12023): Found entity 1: spi_module File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/spi_driver/spi_module.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/switch_driver/switch.v
+    Info (12023): Found entity 1: switch_ctrol File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/switch_driver/switch.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/x4driver/x4_read_frame.v
+    Info (12023): Found entity 1: read_x4_frame File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4driver/X4_read_frame.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/x4driver/ram.v
+    Info (12023): Found entity 1: ram File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4driver/ram.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/x4driver/cmd_ctrl.v
+    Info (12023): Found entity 1: cmd_ctrl File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4driver/cmd_ctrl.v Line: 2
+Warning (10275): Verilog HDL Module Instantiation warning at x4_mimo_top.v(134): ignored dangling comma in List of Port Connections File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4_mimo_top.v Line: 134
+Warning (10275): Verilog HDL Module Instantiation warning at x4_mimo_top.v(273): ignored dangling comma in List of Port Connections File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4_mimo_top.v Line: 273
+Warning (10275): Verilog HDL Module Instantiation warning at x4_mimo_top.v(296): ignored dangling comma in List of Port Connections File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4_mimo_top.v Line: 296
+Warning (10275): Verilog HDL Module Instantiation warning at x4_mimo_top.v(315): ignored dangling comma in List of Port Connections File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4_mimo_top.v Line: 315
+Warning (10275): Verilog HDL Module Instantiation warning at x4_mimo_top.v(344): ignored dangling comma in List of Port Connections File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4_mimo_top.v Line: 344
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/x4_mimo_top.v
+    Info (12023): Found entity 1: x4_mimo_top File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4_mimo_top.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file /git_file/mimo-udp/x4_mimo_udp/fpga_prj/src/syn_rst_n.v
+    Info (12023): Found entity 1: syn_rst_n File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/syn_rst_n.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/global_clk/global_clk.v
+    Info (12023): Found entity 1: global_clk File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/ip/global_clk/global_clk.v Line: 6
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/global_clk/submodules/global_clk_altclkctrl_0.v
+    Info (12023): Found entity 1: global_clk_altclkctrl_0_sub File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/ip/global_clk/submodules/global_clk_altclkctrl_0.v Line: 28
+    Info (12023): Found entity 2: global_clk_altclkctrl_0 File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/ip/global_clk/submodules/global_clk_altclkctrl_0.v Line: 79
+Info (144001): Generated suppressed messages file I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/X4_mimo_top.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 7 warnings
+    Error: Peak virtual memory: 4766 megabytes
+    Error: Processing ended: Thu Feb 24 14:36:43 2022
+    Error: Elapsed time: 00:00:25
+    Error: Total CPU time (on all processors): 00:00:43
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/X4_mimo_top.map.smsg.
+
+

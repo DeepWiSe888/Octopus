@@ -1,0 +1,268 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+# Date created = 14:31:07  February 24, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		X4_mimo_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE15F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY AIWise_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:31:07  FEBRUARY 24, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "17.1.0 Standard Edition"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_location_assignment PIN_A12 -to gmii_rx_clk
+set_location_assignment PIN_C1 -to gmii_rx_data[7]
+set_location_assignment PIN_C7 -to gmii_rx_data[6]
+set_location_assignment PIN_C8 -to gmii_rx_data[5]
+set_location_assignment PIN_C2 -to gmii_rx_data[4]
+set_location_assignment PIN_D2 -to gmii_rx_data[3]
+set_location_assignment PIN_E1 -to gmii_rx_data[2]
+set_location_assignment PIN_F1 -to gmii_rx_data[1]
+set_location_assignment PIN_F2 -to gmii_rx_data[0]
+set_location_assignment PIN_C6 -to gmii_rx_dv
+set_location_assignment PIN_C3 -to gmii_rx_er
+set_location_assignment PIN_B2 -to gmii_tx_clk
+set_location_assignment PIN_A8 -to gmii_tx_data[7]
+set_location_assignment PIN_B7 -to gmii_tx_data[6]
+set_location_assignment PIN_A7 -to gmii_tx_data[5]
+set_location_assignment PIN_B6 -to gmii_tx_data[4]
+set_location_assignment PIN_B5 -to gmii_tx_data[3]
+set_location_assignment PIN_A5 -to gmii_tx_data[2]
+set_location_assignment PIN_B4 -to gmii_tx_data[1]
+set_location_assignment PIN_B3 -to gmii_tx_data[0]
+set_location_assignment PIN_A3 -to gmii_tx_en
+set_location_assignment PIN_B8 -to gmii_tx_er
+set_location_assignment PIN_A4 -to phy_rst_n
+set_location_assignment PIN_U13 -to s2_in
+set_location_assignment PIN_V13 -to s3_in
+set_location_assignment PIN_AB12 -to s_rst_n
+set_location_assignment PIN_F13 -to x4_cs
+set_location_assignment PIN_E14 -to x4_enable
+set_location_assignment PIN_F14 -to x4_isr
+set_location_assignment PIN_K16 -to x4_miso
+set_location_assignment PIN_J17 -to x4_mosi
+set_location_assignment PIN_H17 -to x4_sclk
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/gg.stp
+set_location_assignment PIN_F9 -to r_switch_A
+set_location_assignment PIN_G7 -to r_switch_B
+set_location_assignment PIN_E6 -to r_switch_C
+set_location_assignment PIN_C4 -to t_switch_A
+set_location_assignment PIN_E3 -to t_switch_B
+set_location_assignment PIN_G4 -to t_switch_C
+set_location_assignment PIN_L6 -to adc_clk
+set_location_assignment PIN_N5 -to adc_data[7]
+set_location_assignment PIN_M4 -to adc_data[6]
+set_location_assignment PIN_M5 -to adc_data[5]
+set_location_assignment PIN_R6 -to adc_data[4]
+set_location_assignment PIN_T5 -to adc_data[3]
+set_location_assignment PIN_U7 -to adc_data[2]
+set_location_assignment PIN_V5 -to adc_data[1]
+set_location_assignment PIN_V6 -to adc_data[0]
+set_location_assignment PIN_G1 -to g_clk
+set_location_assignment PIN_M3 -to adc_otr
+set_location_assignment PIN_P6 -to sync_in
+set_location_assignment PIN_U8 -to rx_v[0]
+set_location_assignment PIN_P5 -to rx_v[6]
+set_location_assignment PIN_T8 -to rx_v[5]
+set_location_assignment PIN_T7 -to rx_v[4]
+set_location_assignment PIN_V8 -to rx_v[3]
+set_location_assignment PIN_V7 -to rx_v[2]
+set_location_assignment PIN_V9 -to rx_v[1]
+set_location_assignment PIN_U10 -to tx_v[0]
+set_location_assignment PIN_U9 -to tx_v[1]
+set_location_assignment PIN_W14 -to BGT60_cs
+set_location_assignment PIN_P22 -to BGT60_isr
+set_location_assignment PIN_U12 -to BGT60_led
+set_location_assignment PIN_Y17 -to BGT60_miso
+set_location_assignment PIN_R21 -to BGT60_mosi
+set_location_assignment PIN_Y13 -to BGT60_rst
+set_location_assignment PIN_R22 -to BGT60_sclk
+set_location_assignment PIN_AA1 -to dac_da[7]
+set_location_assignment PIN_R2 -to dac_clka
+set_location_assignment PIN_Y2 -to dac_da[6]
+set_location_assignment PIN_Y1 -to dac_da[5]
+set_location_assignment PIN_W2 -to dac_da[4]
+set_location_assignment PIN_W1 -to dac_da[3]
+set_location_assignment PIN_V2 -to dac_da[2]
+set_location_assignment PIN_V1 -to dac_da[1]
+set_location_assignment PIN_U2 -to dac_da[0]
+set_location_assignment PIN_Y4 -to dac_mode
+set_location_assignment PIN_H2 -to dac_sleep
+set_location_assignment PIN_U1 -to dac_wra
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to gmii_rx_clk -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to adc_clk -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to adc_clk -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_BLOCK_TYPE=AUTO" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=512" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=512" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to sync_in -section_id auto_signaltap_0
+set_instance_assignment -name CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to sync_in -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=2" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=2" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=2" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00000000000000000000000000000" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=29" -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to auto_signaltap_0|gnd -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to auto_signaltap_0|vcc -section_id auto_signaltap_0
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_SYNTH -section_id "cmd_ctrl:u4_pc_cmd"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "cmd_ctrl:u4_pc_cmd"
+set_global_assignment -name PARTITION_COLOR 39423 -section_id "cmd_ctrl:u4_pc_cmd"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_SYNTH -section_id "uwb_top:uwb_radar"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "uwb_top:uwb_radar"
+set_global_assignment -name PARTITION_COLOR 52377 -section_id "uwb_top:uwb_radar"
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_SYNTH -section_id "fmcw_radar_controler:fmcw_radar"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id "fmcw_radar_controler:fmcw_radar"
+set_global_assignment -name PARTITION_COLOR 16776960 -section_id "fmcw_radar_controler:fmcw_radar"
+set_global_assignment -name VERILOG_FILE ../src/AIWise_top.v
+set_global_assignment -name QXP_FILE "../src/qxp/uwb_top-uwb_radar.qxp"
+set_global_assignment -name QXP_FILE "../src/qxp/fmcw_radar_controler-fmcw_radar.qxp"
+set_global_assignment -name QXP_FILE "../src/qxp/cmd_ctrl-u4_pc_cmd.qxp"
+set_global_assignment -name VERILOG_FILE ../src/fmcw_radar/fmcw_radar_controler.v
+set_global_assignment -name VERILOG_FILE ../src/udp_cmd_ctrl/cmd_fifo.v
+set_global_assignment -name VERILOG_FILE ../src/udp_cmd_ctrl/cmd_ctrl.v
+set_global_assignment -name VERILOG_FILE ../src/fmcw_radar/gf_data_fifo.v
+set_global_assignment -name QIP_FILE ../src/fmcw_radar/gf_data_fifo.qip
+set_global_assignment -name VERILOG_FILE ../src/reset/syn_rst_n.v
+set_global_assignment -name VERILOG_FILE ../src/x4driver/uwb_top.v
+set_global_assignment -name VERILOG_FILE ../src/x4driver/switch.v
+set_global_assignment -name VERILOG_FILE ../src/x4driver/frame_data_fifo.v
+set_global_assignment -name VERILOG_FILE ../src/x4driver/data_process.v
+set_global_assignment -name VERILOG_FILE ../src/dac_driver/dac.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/download_fifo.v
+set_global_assignment -name VERILOG_FILE ../src/dac.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/write_upl_fifo_ctrl.v
+set_global_assignment -name VERILOG_FILE ../src/uwb_top.v
+set_global_assignment -name VERILOG_FILE ../src/wirush_top.v
+set_global_assignment -name VERILOG_FILE ../src/data_process/frame_data_fifo.v
+set_global_assignment -name VERILOG_FILE ../src/data_process/data_process.v
+set_global_assignment -name VERILOG_FILE ../src/debounce/udp_debounce.v
+set_global_assignment -name VERILOG_FILE ../src/debounce/arp_debounce.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/generate_data.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/eth_udp_send.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/eth_top.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/eth_receive.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/eth_mac_send.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/eth_data_wr2ram.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/eth_arp_send.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/crc.v
+set_global_assignment -name VERILOG_FILE ../src/ethernet/auto_read_write.v
+set_global_assignment -name QSYS_FILE ../src/ip_core/global_clk.qsys
+set_global_assignment -name VERILOG_FILE ../src/spi_driver/spi_module.v
+set_global_assignment -name VERILOG_FILE ../src/switch_driver/switch.v
+set_global_assignment -name VERILOG_FILE ../src/x4driver/X4_read_frame.v
+set_global_assignment -name VERILOG_FILE ../src/x4driver/ram.v
+set_global_assignment -name QIP_FILE ../src/x4driver/ram.qip
+set_global_assignment -name VERILOG_FILE ../src/x4driver/cmd_ctrl.v
+set_global_assignment -name VERILOG_FILE ../src/x4_mimo_top.v
+set_global_assignment -name VERILOG_FILE ../src/syn_rst_n.v
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/tt.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/rr.stp
+set_global_assignment -name QIP_FILE ../src/fifo/download_fifo.qip
+set_global_assignment -name VERILOG_FILE ../src/ethernet/dl_fifo_ctrl.v
+set_global_assignment -name SIGNALTAP_FILE output_files/e.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/99.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/xfv.stp
+set_global_assignment -name QIP_FILE ../src/pll/pll.qip
+set_global_assignment -name QIP_FILE ../src/ethernet/upl_fifo.qip
+set_global_assignment -name QIP_FILE ../src/x4driver/cmd_fifo.qip
+set_global_assignment -name SIGNALTAP_FILE output_files/tttt.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/ii.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/gg.stp
+set_global_assignment -name SIGNALTAP_FILE output_files/dd.stp
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY u4pcc_2a8a1 -to "cmd_ctrl:u4_pc_cmd" -section_id "cmd_ctrl:u4_pc_cmd"
+set_instance_assignment -name PARTITION_HIERARCHY fmcwr_713b1 -to "fmcw_radar_controler:fmcw_radar" -section_id "fmcw_radar_controler:fmcw_radar"
+set_instance_assignment -name PARTITION_HIERARCHY uwbra_8af91 -to "uwb_top:uwb_radar" -section_id "uwb_top:uwb_radar"
+set_global_assignment -name SLD_FILE db/gg_auto_stripped.stp

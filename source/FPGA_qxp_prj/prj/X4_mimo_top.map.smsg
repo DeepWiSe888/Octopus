@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at eth_udp_send.v(29): object "IP_HEADER" differs only in case from object "ip_header" in the same scope File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_udp_send.v Line: 29
+Info (10281): Verilog HDL Declaration information at eth_mac_send.v(27): object "crc" differs only in case from object "CRC" in the same scope File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_mac_send.v Line: 27
+Info (10281): Verilog HDL Declaration information at X4_read_frame.v(74): object "BIT_SET" differs only in case from object "bit_set" in the same scope File: I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4driver/X4_read_frame.v Line: 74

@@ -1,0 +1,33 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\wen\Desktop\lab_tmp\eth\arp_test\src\ip_core\global_clk.qsys --block-symbol-file --output-directory=C:\Users\wen\Desktop\lab_tmp\eth\arp_test\src\ip_core\global_clk --family="Cyclone IV E" --part=EP4CE30F23C8
+Progress: Loading ip_core/global_clk.qsys
+Progress: Reading input file
+Progress: Adding altclkctrl_0 [altclkctrl 17.1]
+Progress: Parameterizing module altclkctrl_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: global_clk.altclkctrl_0: Targeting device family: Cyclone IV E.
+: global_clk.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\wen\Desktop\lab_tmp\eth\arp_test\src\ip_core\global_clk.qsys --synthesis=VERILOG --output-directory=C:\Users\wen\Desktop\lab_tmp\eth\arp_test\src\ip_core\global_clk\synthesis --family="Cyclone IV E" --part=EP4CE30F23C8
+Progress: Loading ip_core/global_clk.qsys
+Progress: Reading input file
+Progress: Adding altclkctrl_0 [altclkctrl 17.1]
+Progress: Parameterizing module altclkctrl_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+: global_clk.altclkctrl_0: Targeting device family: Cyclone IV E.
+: global_clk.altclkctrl_0: Global clock network allows a clock signal to reach all parts of the chip with the same amount of skew. Input port 'clkselect' can be used to switch between four clock inputs.
+Info: global_clk: Generating global_clk "global_clk" for QUARTUS_SYNTH
+Info: altclkctrl_0: Generating top-level entity global_clk_altclkctrl_0.
+Info: altclkctrl_0: "global_clk" instantiated altclkctrl "altclkctrl_0"
+Info: global_clk: Done "global_clk" with 2 modules, 2 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,87 @@
+Quartus Prime Archive log --	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qarlog
+
+Archive:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qar
+Date:		Mon May 16 17:03:17 2022
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+	=========== Files Selected: ===========
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.cmp.atm
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.cmp.dpi
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.cmp.hdbx
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.cmp.logdb
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.cmp.map.kpt
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.cmp.qxp_info
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.cmp.rcf
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.cmp.scidsc
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.map.atm
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.map.dpi
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.map.hdbx
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.map.logdb
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.map.map.kpt
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.map.qxp_info
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/X4_mimo_top.map.scidsc
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/db/X4_mimo_top_tmp_qic_export/qic_export_file_list
+	======= Total: 16 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:09:50 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:11:38 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:17:40 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:18:45 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:20:01 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:20:58 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:22:37 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:25:22 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:28:55 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Mon May 16 17:33:12 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/src/qxp/cmd_ctrl-u4_pc_cmd.qxp
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_qxp_prj/prj/db/X4_mimo_top_tmp_qic_import/
+		 - successfully.

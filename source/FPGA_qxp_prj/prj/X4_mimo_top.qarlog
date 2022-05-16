@@ -1,0 +1,59 @@
+Quartus Prime Archive log --	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/X4_mimo_top.qarlog
+
+Archive:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/X4_mimo_top.qar
+Date:		Thu Feb 24 16:10:00 2022
+Quartus Prime		17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+	=========== Files Selected: ===========
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/X4_mimo_top.qpf
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/X4_mimo_top.qsf
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/X4_mimo_top.tcl
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/data_process/data_process.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/data_process/frame_data_fifo.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/debounce/arp_debounce.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/debounce/udp_debounce.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/eth_send_top.sdc
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/auto_read_write.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/crc.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_arp_send.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_data_wr2ram.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_mac_send.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_receive.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_top.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/eth_udp_send.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ethernet/generate_data.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk.qsys
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk.sopcinfo
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/global_clk.bsf
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/global_clk.cmp
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/global_clk.html
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/global_clk.ppf
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/global_clk.xml
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/global_clk_bb.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/global_clk_generation.rpt
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/global_clk_inst.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/global_clk_inst.vhd
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/synthesis/global_clk.debuginfo
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/synthesis/global_clk.qip
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/synthesis/global_clk.qip.bak
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/synthesis/global_clk.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/ip_core/global_clk/synthesis/submodules/global_clk_altclkctrl_0.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/spi_driver/spi_module.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/switch_driver/switch.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/syn_rst_n.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4_mimo_top.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4driver/X4_read_frame.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4driver/cmd_ctrl.v
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4driver/ram.qip
+I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/src/x4driver/ram.v
+d:/intelfpga/17.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 42 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Thu Feb 24 16:26:51 2022
+Source archive file:	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/X4_mimo_top.qar
+Archive was extracted into	I:/git_file/MIMO-UDP/x4_mimo_udp/FPGA_prj/prj/X4_mimo_top_restored/
+		 - successfully.
