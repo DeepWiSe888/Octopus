@@ -67,7 +67,7 @@ void get_gf_data()
 #endif
         }
 
-        if (fifo_get(buff, 970)) {
+        if (fifo_get(buff, 490)) {
 #if SEND_TO_UDP
 
 #endif

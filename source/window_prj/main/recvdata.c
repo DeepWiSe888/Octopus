@@ -83,7 +83,7 @@ int udprecv(void)
         int nRecv = udp_recv(rdata, sizeof(rdata));
         if(nRecv < 0) return -1;
         else fifo_data_in(rdata, nRecv);
-        if(nRecv < 1000) printf(" nRecv:%d \n",nRecv);
+        if(nRecv < 300) printf(" nRecv:%d \n",nRecv);
     }
     return 1;
 }
