@@ -63,8 +63,8 @@ int main(int argc, char *argv[])
         return 1;
     }
     set_init_enable();
-    set_init_enable();
-    set_init_enable();
+  //  set_init_enable();
+   // set_init_enable();
     while(1)
     {
 

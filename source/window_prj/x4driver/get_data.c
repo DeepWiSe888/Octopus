@@ -61,15 +61,22 @@ void *get_x4data(void)
 #endif
         }
 
-        if( fifo_get(buff, 1681))
+        if( fifo_get(buff, 1680) == 1)
         {
 
             new_frame_num = get_frame_num(buff);
             lost_frame = new_frame_num - cnt_frame_num;
             if( lost_frame != 1)
             {
+//                for(int i = 0; i < 1681; i ++)
+//                    printf("i2:%x  ",buff2[i]);
+//                printf("\n");
+//                for(int i = 0; i < 1681; i ++)
+//                printf("i:%x  ",buff[i]);
+//                printf("\n");
                 printf("lost data: %d   : %x %x \n", lost_frame, new_frame_num, cnt_frame_num);
             }
+
             cnt_frame_num = new_frame_num;
             memset(data_frame_normolized, 0, sizeof (data_frame_normolized));
             get_frame_data(buff + 24, 1656, data_frame_normolized, 276);

@@ -25,7 +25,7 @@ int fifo_data_in(unsigned  char * data, int len)
 {
     while (fifo_used)
     {
-        usleep(100);
+        usleep(5);
     }
     fifo_used = 1;
 
@@ -33,25 +33,26 @@ int fifo_data_in(unsigned  char * data, int len)
     {
         printf("fifo  full ............................\n");
         fifo_used  = 0;
-        return 0;
+        return -1;
     }
 
     memcpy(fifo + fifo_len, data, len);
     fifo_len  += len;
    // printf("fifo_len_in : %d \n", fifo_len);
     fifo_used  = 0;
+    return  1;
 }
 
 int fifo_get(unsigned char * data, int len)
 {
-    if(fifo_len <=  len)
+    if(fifo_len <  len*1)
     {
         // printf("fifo  empty ............................\n");
-        return 0;
+        return -1;
     }
     while (fifo_used)
     {
-        usleep(100);
+        usleep(5);
     }
 
     fifo_used = 1;
@@ -59,6 +60,7 @@ int fifo_get(unsigned char * data, int len)
     if(pos < 0)
     {
         fifo_len = 0;
+        return -1;
     }
     else if((fifo_len - pos ) >= len)
     {
@@ -70,19 +72,21 @@ int fifo_get(unsigned char * data, int len)
         return 1;
     }
     fifo_used = 0;
-    return 0;
+    return -1;
 }
 
 int udprecv(void)
 {
     printf("udprecv\n");
     fifo_init();
-    unsigned char rdata[2560];
+    unsigned char rdata[2500];
     while (1)
     {
+
         int nRecv = udp_recv(rdata, sizeof(rdata));
         if(nRecv < 0) return -1;
         else fifo_data_in(rdata, nRecv);
+
         if(nRecv < 300) printf(" nRecv:%d \n",nRecv);
     }
     return 1;
